@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const cards = [
   { href: "/design", name: "Design", meta: "Kitchens · Bathrooms · Living", img: "/images/design-living-modern.png" },
-  { href: "/build", name: "Build", meta: "Kitchens · Bathrooms · Remodels", img: "/images/build-kitchen-remodel.png" },
+  { href: "/build", name: "Build", meta: "Kitchens · Bathrooms · Remodels", img: "/images/build-modern-kitchen.png" },
   { href: "/surfaces", name: "Surfaces", meta: "Microcement · Limewash · Plaster", img: "/images/surfaces-1.png" },
 ];
 

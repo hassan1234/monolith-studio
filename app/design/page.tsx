@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 const slides: Slide[] = [
-  { src: "/images/design-kitchen-modern.png", label: "Kitchens" },
+  { src: "/images/design-kitchen-modern-v2.png", label: "Kitchens" },
   { src: "/images/design-living-modern.png", label: "Living Rooms" },
   { src: "/images/design-lounge.png", label: "Lounge" },
   { src: "/images/design-bedroom-modern.png", label: "Bedrooms" },
