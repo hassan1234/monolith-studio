@@ -2,9 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const cards = [
-  { href: "/design", name: "Design", meta: "Concept · Material · Detail", img: "/images/design-living-v2.png" },
-  { href: "/build", name: "Build", meta: "Structure · Craft · Delivery", img: "/images/build-living-v2.png" },
-  { href: "/surfaces", name: "Surfaces", meta: "Microcement · Plaster · Finish", img: "/images/surfaces-1.png" },
+  { href: "/design", name: "Design", meta: "Kitchens · Bathrooms · Living", img: "/images/design-living-modern.png" },
+  { href: "/build", name: "Build", meta: "Kitchens · Bathrooms · Remodels", img: "/images/build-kitchen-remodel.png" },
+  { href: "/surfaces", name: "Surfaces", meta: "Microcement · Limewash · Plaster", img: "/images/surfaces-1.png" },
 ];
 
 export default function Home() {

@@ -29,7 +29,7 @@ export default function ContactPage() {
             </div>
             <div className="contact__block">
               <span className="eyebrow">Phone</span>
-              <a href="tel:+10000000000">+1 (000) 000&#8209;0000</a>
+              <a href="tel:+17037058747">703&#8209;705&#8209;8747</a>
             </div>
             <div className="contact__block">
               <span className="eyebrow">Studio</span>
