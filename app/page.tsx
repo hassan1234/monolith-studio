@@ -71,15 +71,11 @@ export default function Home() {
       </section>
 
       {/* About Us */}
-      <section className="capabilities">
+      <section className="capabilities about">
         <div className="wrap">
-          <div className="intro__grid">
-            <div>
-              <span className="eyebrow" style={{ display: "block", marginBottom: 20 }}>
-                About Us
-              </span>
-              <h2>Everything your space needs, in one place.</h2>
-            </div>
+          <div className="about__inner">
+            <span className="eyebrow">About Us</span>
+            <h2>Everything your space needs, in one place.</h2>
             <p>
               We started Monolith to make it simple — everything a home needs,
               handled by one team. Whether it&rsquo;s a complete renovation, a
