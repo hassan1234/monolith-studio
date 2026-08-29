@@ -1,42 +1,50 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import StyleGrid, { type StyleItem } from "@/components/StyleGrid";
 
 export const metadata: Metadata = {
   title: "Design — Monolith",
   description:
-    "The Monolith interior design process — from first consultation to final styling. Modern, considered spaces designed around how you live.",
+    "Interior design at Monolith — explore our styles (minimalist, Scandinavian, modern, Japandi) and see our design journey from space planning to 3D renderings.",
 };
 
-const process = [
+const styleItems: StyleItem[] = [
+  { src: "/images/style-min-1.png", style: "Minimalist", alt: "Minimalist living room" },
+  { src: "/images/style-scandi-1.png", style: "Scandinavian", alt: "Scandinavian living room" },
+  { src: "/images/style-modern-1.png", style: "Modern", alt: "Modern living room" },
+  { src: "/images/style-japandi-1.png", style: "Japandi", alt: "Japandi living room" },
+  { src: "/images/style-min-2.png", style: "Minimalist", alt: "Minimalist bedroom" },
+  { src: "/images/style-scandi-2.png", style: "Scandinavian", alt: "Scandinavian kitchen" },
+  { src: "/images/style-modern-2.png", style: "Modern", alt: "Modern kitchen" },
+  { src: "/images/style-japandi-2.png", style: "Japandi", alt: "Japandi bedroom" },
+  { src: "/images/style-min-3.png", style: "Minimalist", alt: "Minimalist dining nook" },
+  { src: "/images/style-scandi-3.png", style: "Scandinavian", alt: "Scandinavian bedroom" },
+  { src: "/images/style-modern-3.png", style: "Modern", alt: "Modern dining room" },
+  { src: "/images/style-japandi-3.png", style: "Japandi", alt: "Japandi dining space" },
+];
+
+const journey = [
   {
     n: "01",
-    h: "Consultation",
-    p: "We start with you: how you live, what frustrates you about the space now, your goals and your budget. We listen before we draw a single thing.",
+    h: "Space Planning & Layout",
+    img: "/images/journey-plan.png",
+    alt: "Architectural floor plan and layout",
+    p: "We map out your spatial flow, structural possibilities, and functional layouts. Every square foot is optimized for your lifestyle before construction begins.",
   },
   {
     n: "02",
-    h: "Concept & Moodboard",
-    p: "We shape a clear direction — references, palette and real material samples — so you can see and feel the design long before it is built.",
+    h: "Curation & Mood Boards",
+    img: "/images/journey-materials.png",
+    alt: "Flat lay of fabric, paint and surface samples",
+    p: "We bring your aesthetic to life. Using digital mood boards and physical material trays, we seamlessly pair interior styling with the perfect architectural finishes.",
   },
   {
     n: "03",
-    h: "Space Planning",
-    p: "Layouts, flow and proportion are resolved first, so every room works hard and feels effortless to move through.",
-  },
-  {
-    n: "04",
-    h: "Design & Detail",
-    p: "Elevations, joinery, lighting and finishes drawn to the millimetre — the quiet details that make a space feel truly considered.",
-  },
-  {
-    n: "05",
-    h: "Sourcing & Styling",
-    p: "Furniture, fittings and the final layers, sourced and styled so the space feels complete and personal from the very first day.",
-  },
-  {
-    n: "06",
-    h: "Handover",
-    p: "We walk you through the finished space — resolved, styled and ready to live in, exactly as it was drawn.",
+    h: "3D Renderings & Specifications",
+    img: "/images/journey-render.png",
+    alt: "Photorealistic 3D interior rendering",
+    p: "See your exact space before it exists. We create realistic 3D renderings and finalize exact technical specifications, ensuring a flawless handover to execution.",
   },
 ];
 
@@ -48,23 +56,41 @@ export default function DesignPage() {
           <span className="eyebrow">Interior &amp; Exterior Design</span>
           <h1>Design</h1>
           <p className="lead">
-            We design the spaces you live in — inside and out, around how you
-            actually live. It all runs through one clear, considered process.
+            We design the spaces you live in — inside and out, in the style that
+            suits you. Explore our range, then see how we bring it to life.
           </p>
         </div>
       </header>
 
+      {/* Explore Our Styles */}
       <section className="capabilities" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="capabilities__head">
-            <span className="eyebrow">The Process</span>
-            <h2>How a Monolith design comes together.</h2>
+            <span className="eyebrow">Explore Our Styles</span>
+            <h2>Find the language that fits your home.</h2>
           </div>
-          <div className="process">
-            {process.map((s) => (
-              <div className="process__step" key={s.n}>
-                <span className="process__num">{s.n}</span>
+          <StyleGrid
+            items={styleItems}
+            styles={["Minimalist", "Scandinavian", "Modern", "Japandi"]}
+          />
+        </div>
+      </section>
+
+      {/* The Design Journey */}
+      <section className="capabilities" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="capabilities__head">
+            <span className="eyebrow">How We Work</span>
+            <h2>The Design Journey.</h2>
+          </div>
+          <div className="journey">
+            {journey.map((s) => (
+              <div className="journey__step" key={s.n}>
+                <div className="journey__media">
+                  <Image src={s.img} alt={s.alt} width={1200} height={900} />
+                </div>
                 <div>
+                  <span className="journey__num">{s.n} /</span>
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
                 </div>
@@ -74,17 +100,7 @@ export default function DesignPage() {
         </div>
       </section>
 
-      <section className="intro" style={{ paddingTop: 0 }}>
-        <div className="wrap intro__grid">
-          <h2>Design that feels like it was always meant to be yours.</h2>
-          <p>
-            We shape modern spaces that are warm, functional and quietly
-            beautiful — tailored to you rather than to a trend, and built to
-            live with for years.
-          </p>
-        </div>
-      </section>
-
+      {/* CTA */}
       <section className="wrap">
         <div className="callout">
           <div>
