@@ -7,6 +7,18 @@ const cards = [
   { href: "/surfaces", name: "Surfaces", meta: "Microcement · Limewash · Plaster", img: "/images/surfaces-1.png" },
 ];
 
+const whatWeDo = [
+  { h: "Interior Design", p: "Considered, modern interiors designed around how you live — kitchens, bathrooms, bedrooms, living spaces and more, inside and out." },
+  { h: "Build & Renovation", p: "Full interior remodels and renovations — from custom layouts to complete rebuilds — delivered by the same team that designed them." },
+  { h: "Specialty Surfaces", p: "Seamless microcement, limewash and hand-applied mineral finishes: the final, tactile layer that gives a space its character." },
+];
+
+const philosophy = [
+  { h: "Seamless Execution", p: "We manage your project from the first concept to the final coat of finish — saving you time, guesswork and the hassle of juggling trades." },
+  { h: "Uncompromising Craftsmanship", p: "From structural beams to specialist microcement textures, we demand perfection in every detail, seen and unseen." },
+  { h: "Tailored Textures & Styles", p: "No cookie-cutter spaces. We shape environments that reflect exactly how you live and who you are." },
+];
+
 export default function Home() {
   return (
     <main>
@@ -55,6 +67,83 @@ export default function Home() {
               </span>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* About Us */}
+      <section className="capabilities">
+        <div className="wrap">
+          <div className="intro__grid">
+            <div>
+              <span className="eyebrow" style={{ display: "block", marginBottom: 20 }}>
+                About Us
+              </span>
+              <h2>Everything your space needs, in one place.</h2>
+            </div>
+            <p>
+              We started Monolith to make it simple — everything a home needs,
+              handled by one team. Whether it&rsquo;s a complete renovation, a
+              custom architectural layout, or a sleek, seamless microcement
+              finish, we take care of every detail. We blend structural
+              integrity with high-end aesthetics, so you never have to choose
+              between a space that looks beautiful and one that is built to last.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* What We Do */}
+      <section className="capabilities" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="capabilities__head">
+            <span className="eyebrow">What We Do</span>
+            <h2>Three disciplines, one team.</h2>
+          </div>
+          <div className="dgrid">
+            {whatWeDo.map((c) => (
+              <div className="dgrid__item" key={c.h}>
+                <h3>{c.h}</h3>
+                <p>{c.p}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Philosophy */}
+      <section className="capabilities" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="capabilities__head">
+            <span className="eyebrow">Our Philosophy</span>
+            <h2>How we approach every project.</h2>
+          </div>
+          <div className="dgrid">
+            {philosophy.map((c) => (
+              <div className="dgrid__item" key={c.h}>
+                <h3>{c.h}</h3>
+                <p>{c.p}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="wrap">
+        <div className="callout">
+          <div>
+            <span className="eyebrow">Start your project</span>
+            <h2>Let&rsquo;s build something lasting.</h2>
+            <p>
+              Tell us about your space — a single room or the whole home — and we
+              will take it from first sketch to final finish.
+            </p>
+          </div>
+          <div>
+            <Link className="btn" href="/contact">
+              Get in touch ↗
+            </Link>
+          </div>
         </div>
       </section>
     </main>
