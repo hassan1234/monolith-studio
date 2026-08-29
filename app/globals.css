@@ -262,16 +262,22 @@ img { display: block; max-width: 100%; }
 .dgrid__item h3 { font-family: var(--font-display); font-weight: 300; letter-spacing: 0.06em; font-size: clamp(21px, 2.2vw, 26px); margin-bottom: 14px; }
 .dgrid__item p { color: var(--color-text-dim); font-size: clamp(16px, 1.5vw, 18px); line-height: 1.65; }
 
-/* About Us — full-bleed muted image band, single centered column */
-.about { position: relative; overflow: hidden; background: #2b211a; }
+/* About Us — full-bleed moody image band, text to the left */
+.about { position: relative; overflow: hidden; background: #241a12; min-height: clamp(500px, 66vh, 680px); display: flex; align-items: center; }
 .about__bg { position: absolute; inset: 0; z-index: 0; }
-.about__bg img { object-fit: cover; filter: saturate(0.9) brightness(0.92); }
-.about__scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(26,19,13,0.74) 0%, rgba(26,19,13,0.64) 50%, rgba(26,19,13,0.74) 100%); }
-.about .wrap { position: relative; z-index: 2; }
-.about__inner { max-width: 720px; margin: 0 auto; text-align: center; }
-.about .eyebrow { display: inline-block; margin-bottom: 22px; color: #cdbfae; }
-.about h2 { font-size: var(--text-display); margin-bottom: 30px; color: #F4F0E8; }
-.about p { font-size: clamp(18px, 2.1vw, 23px); line-height: 1.7; color: #EDE7DD; }
+.about__bg img { object-fit: cover; object-position: center right; }
+.about__scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(20,14,9,0.90) 0%, rgba(20,14,9,0.80) 32%, rgba(20,14,9,0.50) 60%, rgba(20,14,9,0.12) 100%); }
+.about .wrap { position: relative; z-index: 2; width: 100%; }
+.about__inner { max-width: 500px; margin: 0; text-align: left; }
+.about .eyebrow { display: block; margin-bottom: 22px; color: #cdbfae; }
+.about h2 { font-size: var(--text-display); margin-bottom: 28px; color: #F4F0E8; }
+.about p { font-size: clamp(17px, 1.9vw, 21px); line-height: 1.7; color: #EDE7DD; }
+@media (max-width: 760px) {
+  .about { min-height: 0; }
+  .about__bg img { object-position: center; }
+  .about__scrim { background: linear-gradient(180deg, rgba(20,14,9,0.82) 0%, rgba(20,14,9,0.74) 100%); }
+  .about__inner { max-width: none; }
+}
 
 /* ── Mobile typography & overflow fixes ────────────────────────────── */
 html { overflow-x: clip; }

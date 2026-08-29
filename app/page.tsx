@@ -15,7 +15,7 @@ const whatWeDo = [
 
 const philosophy = [
   { h: "Seamless Execution", p: "We manage your project from the first concept to the final coat of finish — saving you time, guesswork and the hassle of juggling trades." },
-  { h: "Uncompromising Craftsmanship", p: "From structural beams to specialist microcement textures, we demand perfection in every detail, seen and unseen." },
+  { h: "Uncompromising Craftsmanship", p: "From structural beams to hand-applied surface finishes, we demand perfection in every detail, seen and unseen." },
   { h: "Tailored Textures & Styles", p: "No cookie-cutter spaces. We shape environments that reflect exactly how you live and who you are." },
 ];
 
@@ -73,7 +73,7 @@ export default function Home() {
       {/* About Us */}
       <section className="capabilities about">
         <div className="about__bg" aria-hidden="true">
-          <Image src="/images/about-bg.png" alt="" fill sizes="100vw" />
+          <Image src="/images/about-scene.png" alt="" fill sizes="100vw" priority={false} />
         </div>
         <span className="about__scrim" aria-hidden="true" />
         <div className="wrap">
@@ -83,10 +83,10 @@ export default function Home() {
             <p>
               We started Monolith to make it simple — everything a home needs,
               handled by one team. Whether it&rsquo;s a complete renovation, a
-              custom architectural layout, or a sleek, seamless microcement
-              finish, we take care of every detail. We blend structural
-              integrity with high-end aesthetics, so you never have to choose
-              between a space that looks beautiful and one that is built to last.
+              custom architectural layout, or a flawless, hand-applied finish,
+              we take care of every detail. We blend structural integrity with
+              high-end aesthetics, so you never have to choose between a space
+              that looks beautiful and one that is built to last.
             </p>
           </div>
         </div>
