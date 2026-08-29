@@ -36,16 +36,20 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="intro">
+      {/* What We Do */}
+      <section className="capabilities">
         <div className="wrap">
-          <div className="intro__grid">
-            <h2>A single hand, from concept to concrete.</h2>
-            <p>
-              Monolith brings design, construction and finishing under one roof.
-              Each project moves through the same team, so intent is never lost
-              in translation — the drawing, the structure and the surface all
-              speak the same language.
-            </p>
+          <div className="capabilities__head">
+            <span className="eyebrow">What We Do</span>
+            <h2>Three disciplines, one team.</h2>
+          </div>
+          <div className="dgrid">
+            {whatWeDo.map((c) => (
+              <div className="dgrid__item" key={c.h}>
+                <h3>{c.h}</h3>
+                <p>{c.p}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -92,26 +96,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What We Do */}
-      <section className="capabilities" style={{ paddingTop: 0 }}>
-        <div className="wrap">
-          <div className="capabilities__head">
-            <span className="eyebrow">What We Do</span>
-            <h2>Three disciplines, one team.</h2>
-          </div>
-          <div className="dgrid">
-            {whatWeDo.map((c) => (
-              <div className="dgrid__item" key={c.h}>
-                <h3>{c.h}</h3>
-                <p>{c.p}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Our Philosophy */}
-      <section className="capabilities" style={{ paddingTop: 0 }}>
+      <section className="capabilities">
         <div className="wrap">
           <div className="capabilities__head">
             <span className="eyebrow">Our Philosophy</span>
