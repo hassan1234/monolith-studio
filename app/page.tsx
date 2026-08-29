@@ -102,12 +102,7 @@ export default function Home() {
               <Image src={c.img} alt={c.name} fill sizes="(max-width: 860px) 100vw, 33vw" />
               <span className="card__overlay" />
               <span className="card__body">
-                <span>
-                  <span className="card__name">{c.name}</span>
-                  <span className="card__meta" style={{ display: "block" }}>
-                    {c.meta}
-                  </span>
-                </span>
+                <span className="card__name">{c.name}</span>
                 <span className="card__arrow">↗</span>
               </span>
             </Link>
