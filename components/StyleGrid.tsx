@@ -12,9 +12,9 @@ export default function StyleGrid({
   items: StyleItem[];
   styles: string[];
 }) {
-  const [active, setActive] = useState("All");
-  const filters = ["All", ...styles];
-  const shown = active === "All" ? items : items.filter((i) => i.style === active);
+  const [active, setActive] = useState(styles[0]);
+  const filters = styles;
+  const shown = items.filter((i) => i.style === active);
 
   return (
     <div className="stylegrid">
