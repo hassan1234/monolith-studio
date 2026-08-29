@@ -2,9 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 
 const cards = [
-  { href: "/design", name: "Design", meta: "Kitchens · Bathrooms · Living", img: "/images/design-living-modern.png" },
-  { href: "/build", name: "Build", meta: "Kitchens · Bathrooms · Remodels", img: "/images/build-modern-kitchen.png" },
-  { href: "/surfaces", name: "Surfaces", meta: "Microcement · Limewash · Plaster", img: "/images/surfaces-1.png" },
+  { href: "/design", name: "Design", meta: "Kitchens · Bathrooms · Living", img: "/images/design-living-modern.jpg" },
+  { href: "/build", name: "Build", meta: "Kitchens · Bathrooms · Remodels", img: "/images/build-modern-kitchen.jpg" },
+  { href: "/surfaces", name: "Surfaces", meta: "Microcement · Limewash · Plaster", img: "/images/surfaces-1.jpg" },
 ];
 
 const whatWeDo = [
@@ -57,7 +57,7 @@ export default function Home() {
       {/* About Us */}
       <section className="capabilities about">
         <div className="about__bg" aria-hidden="true">
-          <Image src="/images/about-scene.png" alt="" fill sizes="100vw" priority={false} />
+          <Image src="/images/about-scene.jpg" alt="" fill sizes="100vw" priority={false} />
         </div>
         <span className="about__scrim" aria-hidden="true" />
         <div className="wrap">

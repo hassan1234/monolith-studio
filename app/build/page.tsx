@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 };
 
 const slides: Slide[] = [
-  { src: "/images/build-modern-kitchen.png", label: "Kitchens" },
-  { src: "/images/build-modern-bathroom.png", label: "Bathrooms" },
-  { src: "/images/build-modern-living.png", label: "Living Spaces" },
-  { src: "/images/build-modern-basement.png", label: "Basements" },
-  { src: "/images/build-modern-wholehome.png", label: "Whole Home" },
+  { src: "/images/build-modern-kitchen.jpg", label: "Kitchens" },
+  { src: "/images/build-modern-bathroom.jpg", label: "Bathrooms" },
+  { src: "/images/build-modern-living.jpg", label: "Living Spaces" },
+  { src: "/images/build-modern-basement.jpg", label: "Basements" },
+  { src: "/images/build-modern-wholehome.jpg", label: "Whole Home" },
 ];
 
 const scope = [

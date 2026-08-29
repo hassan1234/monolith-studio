@@ -9,12 +9,12 @@ export const metadata: Metadata = {
 };
 
 const slides: Slide[] = [
-  { src: "/images/surfaces-2.png", label: "Microcement" },
-  { src: "/images/surface-limewash.png", label: "Limewash" },
-  { src: "/images/surface-vanishing.png", label: "Vanishing Plaster" },
-  { src: "/images/surface-tadelakt.png", label: "Tadelakt" },
-  { src: "/images/surface-lime.png", label: "Lime Plaster" },
-  { src: "/images/surface-pigment.png", label: "Pigment & Colour" },
+  { src: "/images/surfaces-2.jpg", label: "Microcement" },
+  { src: "/images/surface-limewash.jpg", label: "Limewash" },
+  { src: "/images/surface-vanishing.jpg", label: "Vanishing Plaster" },
+  { src: "/images/surface-tadelakt.jpg", label: "Tadelakt" },
+  { src: "/images/surface-lime.jpg", label: "Lime Plaster" },
+  { src: "/images/surface-pigment.jpg", label: "Pigment & Colour" },
 ];
 
 const finishes = [
