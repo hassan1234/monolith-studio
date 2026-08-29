@@ -262,11 +262,16 @@ img { display: block; max-width: 100%; }
 .dgrid__item h3 { font-family: var(--font-display); font-weight: 300; letter-spacing: 0.06em; font-size: clamp(21px, 2.2vw, 26px); margin-bottom: 14px; }
 .dgrid__item p { color: var(--color-text-dim); font-size: clamp(16px, 1.5vw, 18px); line-height: 1.65; }
 
-/* About Us — single centered column */
+/* About Us — full-bleed muted image band, single centered column */
+.about { position: relative; overflow: hidden; background: #2b211a; }
+.about__bg { position: absolute; inset: 0; z-index: 0; }
+.about__bg img { object-fit: cover; filter: saturate(0.9) brightness(0.92); }
+.about__scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(26,19,13,0.74) 0%, rgba(26,19,13,0.64) 50%, rgba(26,19,13,0.74) 100%); }
+.about .wrap { position: relative; z-index: 2; }
 .about__inner { max-width: 720px; margin: 0 auto; text-align: center; }
-.about .eyebrow { display: inline-block; margin-bottom: 22px; }
-.about h2 { font-size: var(--text-display); margin-bottom: 30px; }
-.about p { font-size: clamp(18px, 2.1vw, 23px); line-height: 1.7; color: var(--color-text-dim); }
+.about .eyebrow { display: inline-block; margin-bottom: 22px; color: #cdbfae; }
+.about h2 { font-size: var(--text-display); margin-bottom: 30px; color: #F4F0E8; }
+.about p { font-size: clamp(18px, 2.1vw, 23px); line-height: 1.7; color: #EDE7DD; }
 
 /* ── Mobile typography & overflow fixes ────────────────────────────── */
 html { overflow-x: clip; }

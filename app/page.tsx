@@ -72,6 +72,10 @@ export default function Home() {
 
       {/* About Us */}
       <section className="capabilities about">
+        <div className="about__bg" aria-hidden="true">
+          <Image src="/images/about-bg.png" alt="" fill sizes="100vw" />
+        </div>
+        <span className="about__scrim" aria-hidden="true" />
         <div className="wrap">
           <div className="about__inner">
             <span className="eyebrow">About Us</span>
