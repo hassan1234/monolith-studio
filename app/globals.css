@@ -289,3 +289,11 @@ html { overflow-x: clip; }
   .callout { text-align: left; }
   .carousel__dots { gap: 12px 18px; }
 }
+
+/* ── Process timeline (Design) ─────────────────────────────────────── */
+.process { border-top: 1px solid var(--hairline); margin-top: clamp(8px, 2vw, 20px); }
+.process__step { display: grid; grid-template-columns: 96px 1fr; gap: clamp(20px, 4vw, 64px); align-items: start; padding: clamp(32px, 5vw, 56px) 0; border-bottom: 1px solid var(--hairline); }
+@media (max-width: 640px) { .process__step { grid-template-columns: 1fr; gap: 12px; } }
+.process__num { font-family: var(--font-mono); font-size: var(--text-caption); letter-spacing: 0.2em; color: var(--color-text-faint); padding-top: 10px; }
+.process__step h3 { font-family: var(--font-display); font-weight: 300; letter-spacing: 0.04em; font-size: clamp(24px, 3vw, 34px); margin-bottom: 14px; }
+.process__step p { color: var(--color-text-dim); font-size: clamp(16px, 1.5vw, 18px); line-height: 1.65; max-width: 60ch; }

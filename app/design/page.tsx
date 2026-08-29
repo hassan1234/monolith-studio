@@ -1,38 +1,43 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Carousel, { type Slide } from "@/components/Carousel";
 
 export const metadata: Metadata = {
   title: "Design — Monolith",
   description:
-    "Modern interior and exterior design at Monolith — kitchens, living rooms, bedrooms, bathrooms, dining and outdoor spaces, designed around how you live.",
+    "The Monolith interior design process — from first consultation to final styling. Modern, considered spaces designed around how you live.",
 };
 
-const slides: Slide[] = [
-  { src: "/images/design-kitchen-modern-v2.png", label: "Kitchens" },
-  { src: "/images/design-living-modern.png", label: "Living Rooms" },
-  { src: "/images/design-lounge.png", label: "Lounge" },
-  { src: "/images/design-bedroom-modern.png", label: "Bedrooms" },
-  { src: "/images/design-bathroom-modern.png", label: "Bathrooms" },
-  { src: "/images/design-ensuite.png", label: "En-suite" },
-  { src: "/images/design-dining-modern.png", label: "Dining" },
-  { src: "/images/design-outdoor-modern.png", label: "Outdoor" },
-];
-
-const scope = [
-  { h: "Kitchens", p: "Considered layouts, cabinetry and stone — the hardest-working room, designed to feel effortless." },
-  { h: "Living & Dining", p: "Open, sociable spaces balanced with warmth, proportion and layered light." },
-  { h: "Bedrooms", p: "Calm, minimal retreats tuned to how you actually rest and unwind." },
-  { h: "Bathrooms", p: "Spa-like rooms where stone, joinery and fixtures resolve into something serene." },
-  { h: "Whole-Home Interiors", p: "One coherent scheme that flows from room to room across the entire home." },
-  { h: "Outdoor Spaces", p: "Terraces, courtyards and backyards designed with the same care as the rooms inside." },
-];
-
 const process = [
-  { h: "Consult", p: "We start with how you live — and what the space needs to do for you." },
-  { h: "Concept", p: "A clear direction: references, palette and materials you can see and feel early." },
-  { h: "Design", p: "Layouts, elevations, lighting and finishes, resolved to the millimetre." },
-  { h: "Style", p: "Furniture and the final layers, sourced and styled so it feels complete." },
+  {
+    n: "01",
+    h: "Consultation",
+    p: "We start with you: how you live, what frustrates you about the space now, your goals and your budget. We listen before we draw a single thing.",
+  },
+  {
+    n: "02",
+    h: "Concept & Moodboard",
+    p: "We shape a clear direction — references, palette and real material samples — so you can see and feel the design long before it is built.",
+  },
+  {
+    n: "03",
+    h: "Space Planning",
+    p: "Layouts, flow and proportion are resolved first, so every room works hard and feels effortless to move through.",
+  },
+  {
+    n: "04",
+    h: "Design & Detail",
+    p: "Elevations, joinery, lighting and finishes drawn to the millimetre — the quiet details that make a space feel truly considered.",
+  },
+  {
+    n: "05",
+    h: "Sourcing & Styling",
+    p: "Furniture, fittings and the final layers, sourced and styled so the space feels complete and personal from the very first day.",
+  },
+  {
+    n: "06",
+    h: "Handover",
+    p: "We walk you through the finished space — resolved, styled and ready to live in, exactly as it was drawn.",
+  },
 ];
 
 export default function DesignPage() {
@@ -43,45 +48,26 @@ export default function DesignPage() {
           <span className="eyebrow">Interior &amp; Exterior Design</span>
           <h1>Design</h1>
           <p className="lead">
-            Modern, considered spaces designed around how you live — kitchens,
-            living rooms, bedrooms, bathrooms and everything in between, inside
-            and out.
+            We design the spaces you live in — inside and out, around how you
+            actually live. It all runs through one clear, considered process.
           </p>
         </div>
       </header>
 
-      <section className="wrap">
-        <Carousel slides={slides} />
-      </section>
-
-      <section className="capabilities">
-        <div className="wrap">
-          <div className="capabilities__head">
-            <span className="eyebrow">What we design</span>
-            <h2>Every space in the home — and beyond it.</h2>
-          </div>
-          <div className="dgrid">
-            {scope.map((c) => (
-              <div className="dgrid__item" key={c.h}>
-                <h3>{c.h}</h3>
-                <p>{c.p}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="capabilities" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="capabilities__head">
-            <span className="eyebrow">How we work</span>
-            <h2>A calm, considered process.</h2>
+            <span className="eyebrow">The Process</span>
+            <h2>How a Monolith design comes together.</h2>
           </div>
-          <div className="dgrid dgrid--4">
-            {process.map((c) => (
-              <div className="dgrid__item" key={c.h}>
-                <h3>{c.h}</h3>
-                <p>{c.p}</p>
+          <div className="process">
+            {process.map((s) => (
+              <div className="process__step" key={s.n}>
+                <span className="process__num">{s.n}</span>
+                <div>
+                  <h3>{s.h}</h3>
+                  <p>{s.p}</p>
+                </div>
               </div>
             ))}
           </div>
