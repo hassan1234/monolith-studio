@@ -54,26 +54,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="wrap">
-        <div className="cards">
-          {cards.map((c) => (
-            <Link key={c.href} href={c.href} className="card">
-              <Image src={c.img} alt={c.name} fill sizes="(max-width: 860px) 100vw, 33vw" />
-              <span className="card__overlay" />
-              <span className="card__body">
-                <span>
-                  <span className="card__name">{c.name}</span>
-                  <span className="card__meta" style={{ display: "block" }}>
-                    {c.meta}
-                  </span>
-                </span>
-                <span className="card__arrow">↗</span>
-              </span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
       {/* About Us */}
       <section className="capabilities about">
         <div className="about__bg" aria-hidden="true">
@@ -111,6 +91,27 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Explore — Design / Build / Surfaces */}
+      <section className="wrap">
+        <div className="cards">
+          {cards.map((c) => (
+            <Link key={c.href} href={c.href} className="card">
+              <Image src={c.img} alt={c.name} fill sizes="(max-width: 860px) 100vw, 33vw" />
+              <span className="card__overlay" />
+              <span className="card__body">
+                <span>
+                  <span className="card__name">{c.name}</span>
+                  <span className="card__meta" style={{ display: "block" }}>
+                    {c.meta}
+                  </span>
+                </span>
+                <span className="card__arrow">↗</span>
+              </span>
+            </Link>
+          ))}
         </div>
       </section>
 
