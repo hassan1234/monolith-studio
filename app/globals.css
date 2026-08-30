@@ -323,3 +323,17 @@ html { overflow-x: clip; }
 .journey__num { display: block; font-family: var(--font-mono); font-size: var(--text-caption); letter-spacing: 0.2em; color: var(--color-text-faint); margin-bottom: 16px; }
 .journey__step h3 { font-family: var(--font-display); font-weight: 300; letter-spacing: 0.04em; font-size: clamp(24px, 3.2vw, 36px); margin-bottom: 16px; }
 .journey__step p { color: var(--color-text-dim); font-size: clamp(16px, 1.6vw, 18px); line-height: 1.65; max-width: 46ch; }
+
+/* ── Build types — clickable filter with images + blurb ────────────── */
+.btypes { margin-top: clamp(8px, 2vw, 20px); }
+.btypes__filters { display: flex; flex-wrap: wrap; gap: clamp(18px, 3vw, 40px); margin-bottom: clamp(28px, 4vw, 44px); }
+.btypes__filter { border: none; background: none; cursor: pointer; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-text-faint); padding: 6px 0; position: relative; transition: color 0.3s ease; }
+.btypes__filter:hover { color: var(--color-text-dim); }
+.btypes__filter.is-active { color: var(--color-text); }
+.btypes__filter.is-active::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--color-text); }
+.btypes__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(12px, 1.6vw, 20px); animation: fadeUp 0.5s ease; }
+@media (max-width: 640px) { .btypes__grid { grid-template-columns: 1fr; } }
+.btypes__item { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--color-surface); }
+.btypes__item img { object-fit: cover; transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
+.btypes__item:hover img { transform: scale(1.04); }
+.btypes__blurb { margin-top: clamp(24px, 3vw, 36px); max-width: 60ch; color: var(--color-text-dim); font-size: clamp(17px, 1.8vw, 20px); line-height: 1.65; }

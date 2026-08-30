@@ -1,20 +1,35 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import BuildTypes, { type BuildType } from "@/components/BuildTypes";
 
 export const metadata: Metadata = {
   title: "Build — Monolith",
   description:
-    "Interior remodels and full home renovations at Monolith — kitchens, bathrooms, living spaces, basements and whole-home builds, taken from survey to finish.",
+    "Interior remodels and full home renovations at Monolith — kitchens, bathrooms, living spaces and basements, taken from survey to finish.",
 };
 
-const scope = [
-  { h: "Kitchen Remodels", p: "New layouts, cabinetry, worktops, appliances and services — the whole kitchen rebuilt around how you cook." },
-  { h: "Bathroom Remodels", p: "A full re-do: new layout, waterproofing, tiling, vanities, showers and fixtures, upgraded from the studs out." },
-  { h: "Living Spaces", p: "Reconfigured layouts, built-in joinery, fireplaces and feature walls that change how a room lives." },
-  { h: "Basements", p: "Unused space turned into a proper room — lounge, media room, gym or guest suite, fully finished." },
-  { h: "Whole-Home Renovations", p: "Larger projects taken on end to end, from opening up plans to the final coat of paint." },
-  { h: "Upgrades & Finishes", p: "Flooring, lighting, joinery and fixtures — the upgrades that lift a home without a full rebuild." },
+const buildTypes: BuildType[] = [
+  {
+    name: "Kitchen Remodels",
+    blurb: "New layouts, cabinetry, worktops, appliances and services — the whole kitchen rebuilt around how you cook.",
+    images: ["/images/buildtype-kitchen-1.jpg", "/images/buildtype-kitchen-2.jpg"],
+  },
+  {
+    name: "Bathroom Remodels",
+    blurb: "A full re-do: new layout, waterproofing, tiling, vanities, showers and fixtures, upgraded from the studs out.",
+    images: ["/images/buildtype-bathroom-1.jpg", "/images/buildtype-bathroom-2.jpg"],
+  },
+  {
+    name: "Living Spaces",
+    blurb: "Reconfigured layouts, built-in joinery, fireplaces and feature walls that change how a room lives.",
+    images: ["/images/buildtype-living-1.jpg", "/images/buildtype-living-2.jpg"],
+  },
+  {
+    name: "Basements",
+    blurb: "Unused space turned into a proper room — lounge, media room, gym or guest suite, fully finished.",
+    images: ["/images/buildtype-basement-1.jpg", "/images/buildtype-basement-2.jpg"],
+  },
 ];
 
 const journey = [
@@ -22,28 +37,28 @@ const journey = [
     n: "01",
     h: "Survey",
     img: "/images/build-journey-survey.jpg",
-    alt: "Surveying and assessing a space before a renovation",
+    alt: "Kitchen floor plan and layout survey",
     p: "We assess the space, the structure and what is realistic — then scope the work honestly, so there are no surprises later.",
   },
   {
     n: "02",
     h: "Strip-out",
     img: "/images/build-journey-stripout.jpg",
-    alt: "A room stripped back during renovation",
+    alt: "The old kitchen being stripped out",
     p: "Careful removal of the old, with the site kept clean, protected and controlled throughout — ready for a fresh start.",
   },
   {
     n: "03",
     h: "Build",
     img: "/images/build-journey-build.jpg",
-    alt: "New structure and framing during construction",
+    alt: "New cabinetry and structure going in",
     p: "Structure, services, joinery and tiling built to spec by trades who care about tolerances and get the details right.",
   },
   {
     n: "04",
     h: "Finish",
     img: "/images/build-journey-finish.jpg",
-    alt: "A finished, move-in-ready remodeled room",
+    alt: "The finished, move-in-ready kitchen",
     p: "Snagging, final finishes and a clean handover — a room that is fully resolved and ready to live in.",
   },
 ];
@@ -63,21 +78,14 @@ export default function BuildPage() {
         </div>
       </header>
 
-      {/* What we build */}
+      {/* What we build — clickable types */}
       <section className="capabilities" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="capabilities__head">
             <span className="eyebrow">What we build</span>
-            <h2>Full remodels, room by room or whole-home.</h2>
+            <h2>Full remodels, room by room.</h2>
           </div>
-          <div className="dgrid">
-            {scope.map((c) => (
-              <div className="dgrid__item" key={c.h}>
-                <h3>{c.h}</h3>
-                <p>{c.p}</p>
-              </div>
-            ))}
-          </div>
+          <BuildTypes types={buildTypes} />
         </div>
       </section>
 
