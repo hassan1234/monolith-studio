@@ -45,7 +45,7 @@ const journey = [
   {
     n: "01",
     h: "Sample & Select",
-    img: "/images/surface-journey-sample.jpg",
+    img: "/images/surface-journey-sample-v2.jpg",
     alt: "Mineral finish samples",
     p: "We prepare finish samples in your space and light, so you can choose the exact material, tone and sheen with confidence.",
   },
