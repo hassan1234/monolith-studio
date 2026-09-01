@@ -1,36 +1,75 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Carousel, { type Slide } from "@/components/Carousel";
+import Image from "next/image";
+import BuildTypes, { type BuildType } from "@/components/BuildTypes";
 
 export const metadata: Metadata = {
   title: "Surfaces — Monolith",
   description:
-    "Hand-applied mineral finishes at Monolith — microcement, limewash, vanishing plaster, tadelakt, lime plaster and pigmented finishes. Explore each finish.",
+    "Hand-applied mineral finishes at Monolith — microcement, limewash, vanishing plaster, tadelakt, lime plaster and pigmented finishes, with our surfaces journey.",
 };
 
-const slides: Slide[] = [
-  { src: "/images/surfaces-2.jpg", label: "Microcement" },
-  { src: "/images/surface-limewash.jpg", label: "Limewash" },
-  { src: "/images/surface-vanishing.jpg", label: "Vanishing Plaster" },
-  { src: "/images/surface-tadelakt.jpg", label: "Tadelakt" },
-  { src: "/images/surface-lime.jpg", label: "Lime Plaster" },
-  { src: "/images/surface-pigment.jpg", label: "Pigment & Colour" },
+const finishes: BuildType[] = [
+  {
+    name: "Microcement",
+    blurb: "A thin, hard-wearing cementitious coat applied over floors, walls and joinery. Completely seamless — no grout lines, no joints — with a smooth, quietly tactile surface.",
+    images: ["/images/surfaces-2.jpg", "/images/surfaces-1.jpg"],
+  },
+  {
+    name: "Limewash",
+    blurb: "A breathable mineral wash brushed on in thin layers, drying to a soft, chalky matte with cloudy movement and gentle tonal shifts — full of depth and character.",
+    images: ["/images/surface-limewash.jpg", "/images/surface-limewash-2.jpg"],
+  },
+  {
+    name: "Vanishing Plaster",
+    blurb: "A polished plaster finish burnished to a smooth, near-seamless surface with a subtle sheen and marble-like depth — the light seems to sink into the wall.",
+    images: ["/images/surface-vanishing.jpg", "/images/surface-vanishing-2.jpg"],
+  },
+  {
+    name: "Tadelakt",
+    blurb: "A traditional polished lime finish, naturally waterproof and seamless — warm and tactile, and beautifully suited to showers and wet rooms.",
+    images: ["/images/surface-tadelakt.jpg", "/images/surface-tadelakt-2.jpg"],
+  },
+  {
+    name: "Lime Plaster",
+    blurb: "Hand-applied, breathable lime with a soft matte texture and gentle mineral movement — a timeless, natural finish that ages gracefully.",
+    images: ["/images/surface-lime.jpg", "/images/surface-lime-2.jpg"],
+  },
+  {
+    name: "Pigment & Colour",
+    blurb: "Colour worked into the material itself rather than painted on top — from soft neutrals to deep, saturated tones — so the finish keeps its depth and never simply wears off.",
+    images: ["/images/surface-pigment.jpg", "/images/surface-pigment-2.jpg"],
+  },
 ];
 
-const finishes = [
-  { h: "Microcement", p: "A thin, hard-wearing cementitious coat applied over floors, walls and joinery. Completely seamless — no grout lines, no joints — with a smooth, quietly tactile surface that suits modern, high-traffic spaces." },
-  { h: "Limewash", p: "A breathable mineral wash brushed on in thin layers. It dries to a soft, chalky matte with cloudy movement and gentle tonal shifts — full of depth and character, and it only mellows with age. Ideal for warm, calm walls." },
-  { h: "Vanishing Plaster", p: "A polished plaster (Venetian-style) finish burnished back to a smooth, near-seamless surface with a subtle sheen and marble-like depth. Refined and luxurious — the light seems to sink into the wall." },
-  { h: "Tadelakt", p: "A traditional polished lime finish, naturally waterproof and seamless. Warm, tactile and beautifully suited to showers, wet rooms and basins where tile would normally go." },
-  { h: "Lime Plaster", p: "Hand-applied, breathable lime with a soft matte texture and gentle mineral movement. A timeless, natural finish that regulates humidity and ages gracefully." },
-  { h: "Pigment & Colour", p: "Colour worked into the material itself rather than painted on top — from soft neutrals to deep, saturated tones — so the finish keeps its depth and never simply wears off." },
-];
-
-const process = [
-  { h: "Sample", p: "We prepare samples in your space and light, so you can choose the finish, tone and sheen with confidence." },
-  { h: "Prepare", p: "Substrates are assessed, repaired and primed — the groundwork a flawless mineral finish depends on." },
-  { h: "Apply", p: "Built up by hand in thin layers, worked and burnished to the exact texture and depth agreed." },
-  { h: "Seal", p: "Protective mineral seals for wet and high-traffic areas, with simple guidance for a lifetime of care." },
+const journey = [
+  {
+    n: "01",
+    h: "Sample & Select",
+    img: "/images/surface-journey-sample.jpg",
+    alt: "Mineral finish samples",
+    p: "We prepare finish samples in your space and light, so you can choose the exact material, tone and sheen with confidence.",
+  },
+  {
+    n: "02",
+    h: "Prepare",
+    img: "/images/surface-journey-prepare.jpg",
+    alt: "A wall being prepared for a mineral finish",
+    p: "Substrates are assessed, repaired and primed — the groundwork a flawless mineral finish depends on.",
+  },
+  {
+    n: "03",
+    h: "Apply by Hand",
+    img: "/images/surface-journey-apply.jpg",
+    alt: "Mineral plaster being hand-troweled onto a wall",
+    p: "Built up by hand in thin layers, worked and burnished to the exact texture and depth agreed.",
+  },
+  {
+    n: "04",
+    h: "Seal & Protect",
+    img: "/images/surface-journey-seal.jpg",
+    alt: "A finished, sealed mineral surface",
+    p: "Protective mineral seals for wet and high-traffic areas, with simple guidance for a lifetime of care.",
+  },
 ];
 
 export default function SurfacesPage() {
@@ -41,62 +80,49 @@ export default function SurfacesPage() {
           <span className="eyebrow">Surfaces &amp; Finishes</span>
           <h1>Surfaces</h1>
           <p className="lead">
-            Seamless, hand-applied mineral finishes — microcement, limewash,
-            vanishing plaster and more. The final, tactile layer that gives a
-            space its character and calm.
+            Seamless, hand-applied mineral finishes — the final, tactile layer
+            that gives a space its character and calm. Explore the finishes,
+            then see how we bring them to life.
           </p>
         </div>
       </header>
 
-      <section className="wrap">
-        <Carousel slides={slides} />
-      </section>
-
-      <section className="capabilities">
-        <div className="wrap">
-          <div className="capabilities__head">
-            <span className="eyebrow">The finishes</span>
-            <h2>Every finish, explained.</h2>
-          </div>
-          <div className="dgrid">
-            {finishes.map((c) => (
-              <div className="dgrid__item" key={c.h}>
-                <h3>{c.h}</h3>
-                <p>{c.p}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      {/* The finishes — clickable options */}
       <section className="capabilities" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="capabilities__head">
-            <span className="eyebrow">How we apply</span>
-            <h2>Built up by hand, layer by layer.</h2>
+            <span className="eyebrow">The Finishes</span>
+            <h2>A finish for every surface.</h2>
           </div>
-          <div className="dgrid dgrid--4">
-            {process.map((c) => (
-              <div className="dgrid__item" key={c.h}>
-                <h3>{c.h}</h3>
-                <p>{c.p}</p>
+          <BuildTypes types={finishes} />
+        </div>
+      </section>
+
+      {/* The Surfaces Journey */}
+      <section className="capabilities" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="capabilities__head">
+            <span className="eyebrow">How We Work</span>
+            <h2>The Surfaces Journey.</h2>
+          </div>
+          <div className="journey">
+            {journey.map((s) => (
+              <div className="journey__step" key={s.n}>
+                <div className="journey__media">
+                  <Image src={s.img} alt={s.alt} width={1200} height={900} />
+                </div>
+                <div>
+                  <span className="journey__num">{s.n} /</span>
+                  <h3>{s.h}</h3>
+                  <p>{s.p}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="intro" style={{ paddingTop: 0 }}>
-        <div className="wrap intro__grid">
-          <h2>Finishes with depth you can feel.</h2>
-          <p>
-            Every one of these is a natural, mineral finish applied by hand — so
-            no two walls are ever quite the same. The result is a surface with
-            real movement and warmth that flat paint simply cannot reach.
-          </p>
-        </div>
-      </section>
-
+      {/* Microcement studio callout */}
       <section className="wrap">
         <div className="callout">
           <div>
