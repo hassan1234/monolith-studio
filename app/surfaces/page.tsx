@@ -12,32 +12,32 @@ const finishes: BuildType[] = [
   {
     name: "Microcement",
     blurb: "A thin, hard-wearing cementitious coat applied over floors, walls and joinery. Completely seamless — no grout lines, no joints — with a smooth, quietly tactile surface.",
-    images: ["/images/surfaces-2.jpg", "/images/surfaces-1.jpg"],
+    images: ["/images/fin-microcement-1.jpg", "/images/fin-microcement-2.jpg"],
   },
   {
     name: "Limewash",
     blurb: "A breathable mineral wash brushed on in thin layers, drying to a soft, chalky matte with cloudy movement and gentle tonal shifts — full of depth and character.",
-    images: ["/images/surface-limewash.jpg", "/images/surface-limewash-2.jpg"],
+    images: ["/images/fin-limewash-1.jpg", "/images/fin-limewash-2.jpg"],
   },
   {
     name: "Vanishing Plaster",
     blurb: "A polished plaster finish burnished to a smooth, near-seamless surface with a subtle sheen and marble-like depth — the light seems to sink into the wall.",
-    images: ["/images/surface-vanishing.jpg", "/images/surface-vanishing-2.jpg"],
+    images: ["/images/fin-vanishing-1.jpg", "/images/fin-vanishing-2.jpg"],
   },
   {
     name: "Tadelakt",
     blurb: "A traditional polished lime finish, naturally waterproof and seamless — warm and tactile, and beautifully suited to showers and wet rooms.",
-    images: ["/images/surface-tadelakt.jpg", "/images/surface-tadelakt-2.jpg"],
+    images: ["/images/fin-tadelakt-1.jpg", "/images/fin-tadelakt-2.jpg"],
   },
   {
     name: "Lime Plaster",
     blurb: "Hand-applied, breathable lime with a soft matte texture and gentle mineral movement — a timeless, natural finish that ages gracefully.",
-    images: ["/images/surface-lime.jpg", "/images/surface-lime-2.jpg"],
+    images: ["/images/fin-lime-1.jpg", "/images/fin-lime-2.jpg"],
   },
   {
     name: "Pigment & Colour",
     blurb: "Colour worked into the material itself rather than painted on top — from soft neutrals to deep, saturated tones — so the finish keeps its depth and never simply wears off.",
-    images: ["/images/surface-pigment.jpg", "/images/surface-pigment-2.jpg"],
+    images: ["/images/fin-pigment-1.jpg", "/images/fin-pigment-2.jpg"],
   },
 ];
 
