@@ -25,10 +25,12 @@ export default function Home() {
       <header className="hero">
         <div className="hero__img" aria-hidden="true" />
         <div className="hero__inner">
-          <h1 className="wordmark">
-            Monolith
-            <span className="hero__sub">Design · Build · Surfaces</span>
-          </h1>
+          <h1 className="wordmark">Monolith</h1>
+          <nav className="hero__links" aria-label="Disciplines">
+            <Link href="/design" className="hero__link">Design</Link>
+            <Link href="/build" className="hero__link">Build</Link>
+            <Link href="/surfaces" className="hero__link">Surfaces</Link>
+          </nav>
         </div>
         <div className="hero__scroll" aria-hidden="true">
           <span>Scroll</span>
