@@ -1,17 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Studio — Monolith",
   description:
-    "Monolith is one studio across three disciplines — design, build and surfaces — handled by a single team from first concept to final finish.",
+    "The Monolith studio — one team for design, build and surfaces, and a genuinely different way to renovate a home.",
 };
 
-const beliefs = [
-  { h: "One Team, Start to Finish", p: "Design, construction and finishing sit under one roof, so intent is never lost in translation between trades." },
-  { h: "Structure Meets Aesthetics", p: "We refuse the choice between a space that looks beautiful and one that is built to last — you get both." },
-  { h: "Made for How You Live", p: "No cookie-cutter schemes. Every space is shaped around the people who will actually use it." },
+const hub = [
+  { href: "/studio/process", title: "Our Process", note: "The three journeys, joined end to end — from first sketch to final finish." },
+  { href: "/studio/faq", title: "FAQ", note: "The questions we hear most, answered plainly." },
 ];
 
 export default function StudioPage() {
@@ -22,61 +20,69 @@ export default function StudioPage() {
           <span className="eyebrow">The Studio</span>
           <h1>Studio</h1>
           <p className="lead">
-            Monolith is one studio across three disciplines — design, build and
-            surfaces — handled by a single team from first concept to final coat.
+            One team for design, build and surfaces — and a genuinely different
+            way to renovate a home.
           </p>
         </div>
       </header>
 
-      {/* Story */}
-      <section className="capabilities about" style={{ paddingTop: 0 }}>
-        <div className="about__bg" aria-hidden="true">
-          <Image src="/images/about-scene.jpg" alt="" fill sizes="100vw" />
-        </div>
-        <span className="about__scrim" aria-hidden="true" />
+      {/* The one-team difference */}
+      <section className="capabilities" style={{ paddingTop: 0 }}>
         <div className="wrap">
-          <div className="about__inner">
-            <span className="eyebrow">Why One Team</span>
-            <h2>Everything your space needs, in one place.</h2>
-            <p>
-              We started Monolith to make it simple — everything a home needs,
-              handled by one team. Whether it&rsquo;s a complete renovation, a
-              custom architectural layout, or a flawless, hand-applied finish, we
-              take care of every detail, so you never have to project-manage a
-              string of separate trades who have never met.
-            </p>
+          <div className="capabilities__head">
+            <span className="eyebrow">Why it matters</span>
+            <h2>Renovating shouldn&rsquo;t mean managing a crowd.</h2>
+          </div>
+          <div className="compare">
+            <div className="compare__col">
+              <span className="compare__label">The usual way</span>
+              <p>
+                A designer hands you drawings. You go and find a contractor who
+                has never spoken to them. Somewhere in the gap, details get lost,
+                costs creep, blame gets passed — and you end up project-managing
+                trades who have never met.
+              </p>
+            </div>
+            <div className="compare__col compare__col--us">
+              <span className="compare__label">The Monolith way</span>
+              <p>
+                One team designs, builds and finishes your home. There is no
+                hand-off and no lost intent — just a single point of contact,
+                one coherent plan, and a result that matches the drawing exactly.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Beliefs */}
+      {/* Studio hub */}
       <section className="capabilities" style={{ paddingTop: 0 }}>
         <div className="wrap">
           <div className="capabilities__head">
-            <span className="eyebrow">What We Believe</span>
-            <h2>The principles behind every project.</h2>
+            <span className="eyebrow">Go deeper</span>
+            <h2>How we work, in detail.</h2>
           </div>
-          <div className="dgrid">
-            {beliefs.map((b) => (
-              <div className="dgrid__item" key={b.h}>
-                <h3>{b.h}</h3>
-                <p>{b.p}</p>
-              </div>
+          <div className="studio-hub">
+            {hub.map((h) => (
+              <Link key={h.href} href={h.href} className="studio-hub__card">
+                <span className="studio-hub__title">{h.title}</span>
+                <span className="studio-hub__note">{h.note}</span>
+                <span className="studio-hub__arrow">↗</span>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Process teaser */}
+      {/* Location */}
       <section className="intro" style={{ paddingTop: 0 }}>
         <div className="wrap intro__grid">
-          <h2>Three disciplines, one continuous process.</h2>
+          <h2>Based in Washington, DC.</h2>
           <p>
-            Design, build and surfaces each follow their own journey — but they
-            are joined end to end into a single, considered path from first
-            sketch to final finish.{" "}
-            <Link href="/studio/process" style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>
-              See the full process ↗
+            We design and build across the District — from row houses in Capitol
+            Hill to condos downtown.{" "}
+            <Link href="/areas/washington-dc" style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>
+              See where we work ↗
             </Link>
           </p>
         </div>
@@ -87,16 +93,11 @@ export default function StudioPage() {
         <div className="callout">
           <div>
             <span className="eyebrow">Work with us</span>
-            <h2>Let&rsquo;s build something lasting.</h2>
-            <p>
-              Tell us about your space — a single room or the whole home — and we
-              will take it from first sketch to final finish.
-            </p>
+            <h2>One team, start to finish.</h2>
+            <p>Tell us about your space and we will take it from there.</p>
           </div>
           <div>
-            <Link className="btn" href="/contact">
-              Get in touch ↗
-            </Link>
+            <Link className="btn" href="/contact/start-a-project">Start a project ↗</Link>
           </div>
         </div>
       </section>
