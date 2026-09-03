@@ -433,3 +433,18 @@ html { overflow-x: clip; }
 .studio-hub__title { font-family: var(--font-display); font-weight: 300; letter-spacing: 0.06em; font-size: clamp(24px, 3vw, 34px); margin-bottom: 14px; }
 .studio-hub__note { color: var(--color-text-dim); max-width: 40ch; }
 .studio-hub__arrow { position: absolute; top: clamp(30px, 4vw, 52px); right: clamp(30px, 4vw, 52px); font-family: var(--font-mono); font-size: 18px; color: var(--color-text-dim); }
+
+/* ── Studio: statement band ────────────────────────────────────────── */
+.statement { background: var(--color-espresso); color: #EDE7DD; }
+.statement__inner { max-width: 900px; margin: 0 auto; text-align: center; padding: clamp(72px, 11vw, 130px) var(--space-gutter); }
+.statement .eyebrow { display: inline-block; margin-bottom: 22px; color: #b6a893; }
+.statement h2 { font-size: var(--text-display); color: #F4F0E8; margin-bottom: 26px; line-height: 1.1; }
+.statement p { color: #cdbfae; font-size: clamp(17px, 1.9vw, 21px); line-height: 1.7; max-width: 58ch; margin: 0 auto; }
+
+/* ── Studio: Why Monolith (numbered reasons) ───────────────────────── */
+.why { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(32px, 4vw, 56px) clamp(36px, 5vw, 80px); margin-top: clamp(40px, 6vw, 64px); }
+@media (max-width: 640px) { .why { grid-template-columns: 1fr; gap: 36px; } }
+.why__item { border-top: 1px solid var(--hairline); padding-top: 24px; }
+.why__num { display: block; font-family: var(--font-mono); font-size: var(--text-caption); letter-spacing: 0.2em; color: var(--color-text-faint); margin-bottom: 16px; }
+.why__item h3 { font-family: var(--font-display); font-weight: 300; letter-spacing: 0.04em; font-size: clamp(22px, 2.6vw, 30px); margin-bottom: 12px; }
+.why__item p { color: var(--color-text-dim); font-size: clamp(16px, 1.6vw, 18px); line-height: 1.65; max-width: 46ch; }

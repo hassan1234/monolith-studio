@@ -4,8 +4,31 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Studio — Monolith",
   description:
-    "The Monolith studio — one team for design, build and surfaces, with a single point of contact from first sketch to final finish. Answers to the questions we hear most.",
+    "The Monolith studio — one team for design, build and surfaces, with a single point of contact from first sketch to final finish. Why work with us, and answers to the questions we hear most.",
 };
+
+const reasons = [
+  {
+    n: "01",
+    h: "No hand-offs",
+    p: "The people who design your home are the same people who build and finish it — so intent carries all the way through.",
+  },
+  {
+    n: "02",
+    h: "One point of contact",
+    p: "One team and one conversation, from the first idea to the final walkthrough. You always know who to call.",
+  },
+  {
+    n: "03",
+    h: "Priced with no surprises",
+    p: "A clear, itemised proposal before any work begins, and a realistic programme you can actually plan around.",
+  },
+  {
+    n: "04",
+    h: "Built to the drawing",
+    p: "What we render is what you get — the finished space matches the design, right down to the last detail.",
+  },
+];
 
 const faqs = [
   {
@@ -48,17 +71,39 @@ export default function StudioPage() {
         </div>
       </header>
 
-      {/* One team — a positive statement, no comparisons */}
-      <section className="capabilities" style={{ paddingTop: 0 }}>
-        <div className="wrap intro__grid">
-          <h2>One team, one point of contact.</h2>
+      {/* Statement band */}
+      <section className="statement">
+        <div className="wrap statement__inner">
+          <span className="eyebrow">One studio, one team</span>
+          <h2>
+            Your whole home, handled by one team — from the first line to the
+            final finish.
+          </h2>
           <p>
-            Design, construction and finishing all live under one roof, so the
-            people who draw your home are the same people who build and finish
-            it. You have one point of contact throughout, one coherent plan, and
-            one team accountable for the result — nothing lost between the
-            drawing and the wall.
+            Design, construction and finishing all live under one roof. You get a
+            single point of contact, one coherent plan, and one team that owns
+            the result — so nothing is ever lost between the drawing and the
+            wall.
           </p>
+        </div>
+      </section>
+
+      {/* Why Monolith */}
+      <section className="capabilities">
+        <div className="wrap">
+          <div className="capabilities__head">
+            <span className="eyebrow">Why Monolith</span>
+            <h2>A calmer way to renovate.</h2>
+          </div>
+          <div className="why">
+            {reasons.map((r) => (
+              <div className="why__item" key={r.n}>
+                <span className="why__num">{r.n}</span>
+                <h3>{r.h}</h3>
+                <p>{r.p}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
