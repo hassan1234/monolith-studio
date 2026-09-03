@@ -17,10 +17,12 @@ export default function SiteFooter() {
             <p className="footer__col-label">Explore</p>
             <nav className="footer__nav" aria-label="Footer">
               <Link href="/">Home</Link>
+              <Link href="/work">Work</Link>
               <Link href="/design">Design</Link>
               <Link href="/build">Build</Link>
               <Link href="/surfaces">Surfaces</Link>
               <Link href="/studio">Studio</Link>
+              <Link href="/studio/faq">FAQ</Link>
               <Link href="/contact">Contact</Link>
               <a
                 href="https://monolithmicrocement.com"
