@@ -14,8 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/build",
     "/surfaces",
     "/studio",
-    "/studio/process",
-    "/studio/faq",
     "/areas/washington-dc",
     "/contact",
     "/contact/start-a-project",

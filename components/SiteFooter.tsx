@@ -22,7 +22,6 @@ export default function SiteFooter() {
               <Link href="/build">Build</Link>
               <Link href="/surfaces">Surfaces</Link>
               <Link href="/studio">Studio</Link>
-              <Link href="/studio/faq">FAQ</Link>
               <Link href="/contact">Contact</Link>
               <a
                 href="https://monolithmicrocement.com"
