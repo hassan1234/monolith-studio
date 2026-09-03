@@ -3,32 +3,40 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { servicesByDiscipline, type Service } from "@/lib/services";
 
-const links = [
+type NavLink = {
+  href: string;
+  label: string;
+  discipline?: Service["discipline"];
+};
+
+const links: NavLink[] = [
+  { href: "/design", label: "Design", discipline: "design" },
+  { href: "/build", label: "Build", discipline: "build" },
+  { href: "/surfaces", label: "Surfaces", discipline: "surfaces" },
   { href: "/work", label: "Work" },
-  { href: "/design", label: "Design" },
-  { href: "/build", label: "Build" },
-  { href: "/surfaces", label: "Surfaces" },
   { href: "/studio", label: "Studio" },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact/start-a-project", label: "Start a Project" },
 ];
 
 export default function SiteNav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  // Close the menu whenever the route changes
   useEffect(() => {
     setOpen(false);
   }, [pathname]);
 
-  // Lock body scroll while the mobile menu is open
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  const isActive = (href: string) =>
+    pathname === href || pathname.startsWith(href + "/");
 
   return (
     <nav className={`nav${open ? " nav--open" : ""}`}>
@@ -51,16 +59,35 @@ export default function SiteNav() {
         </button>
 
         <div className={`nav-links${open ? " is-open" : ""}`}>
-          {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className={pathname === l.href ? "active" : ""}
-              onClick={() => setOpen(false)}
-            >
-              {l.label}
-            </Link>
-          ))}
+          {links.map((l) => {
+            const children = l.discipline ? servicesByDiscipline(l.discipline) : [];
+            return (
+              <div className="nav-item" key={l.href}>
+                <Link
+                  href={l.href}
+                  className={isActive(l.href) ? "active" : ""}
+                  onClick={() => setOpen(false)}
+                >
+                  {l.label}
+                </Link>
+                {children.length > 0 && (
+                  <div className="nav-drop">
+                    <div className="nav-drop__box">
+                      {children.map((c) => (
+                        <Link
+                          key={c.slug}
+                          href={`${c.parentHref}/${c.slug}`}
+                          onClick={() => setOpen(false)}
+                        >
+                          {c.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </nav>
