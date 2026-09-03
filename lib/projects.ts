@@ -1,10 +1,9 @@
 // PLACEHOLDER PROJECTS — replace with real projects, photos and details.
-// Slugs are place-based and permanent (never rename; redirect instead).
+// Slugs are type-based and permanent (never rename; redirect instead).
 
 export type Project = {
   slug: string;
   title: string;
-  location: string;
   category: "Whole Home" | "Kitchen" | "Bathroom" | "Basement" | "Surfaces";
   disciplines: string[];
   year: string;
@@ -17,9 +16,8 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "monroe-street-townhouse",
-    title: "Monroe Street Townhouse",
-    location: "Columbia Heights, DC",
+    slug: "townhouse-renovation",
+    title: "Townhouse Renovation",
     category: "Whole Home",
     disciplines: ["Design", "Build", "Surfaces"],
     year: "2025",
@@ -33,9 +31,8 @@ export const projects: Project[] = [
     scope: ["Full-home design and layout", "Structural reconfiguration", "Bespoke kitchen and joinery", "Seamless mineral surfaces"],
   },
   {
-    slug: "logan-circle-kitchen",
-    title: "Logan Circle Kitchen",
-    location: "Logan Circle, DC",
+    slug: "kitchen-remodel",
+    title: "Kitchen Remodel",
     category: "Kitchen",
     disciplines: ["Design", "Build"],
     year: "2025",
@@ -49,9 +46,8 @@ export const projects: Project[] = [
     scope: ["New layout and cabinetry", "Stone worktops and island", "Appliances and services", "Lighting and finishes"],
   },
   {
-    slug: "georgetown-bathroom",
-    title: "Georgetown Bathroom",
-    location: "Georgetown, DC",
+    slug: "bathroom-remodel",
+    title: "Bathroom Remodel",
     category: "Bathroom",
     disciplines: ["Build", "Surfaces"],
     year: "2024",
@@ -65,9 +61,8 @@ export const projects: Project[] = [
     scope: ["Strip-out and waterproofing", "Walk-in shower and vanity", "Tadelakt wall finish", "Brass fixtures and lighting"],
   },
   {
-    slug: "shaw-basement",
-    title: "Shaw Basement",
-    location: "Shaw, DC",
+    slug: "basement-renovation",
+    title: "Basement Renovation",
     category: "Basement",
     disciplines: ["Design", "Build"],
     year: "2024",
@@ -81,9 +76,8 @@ export const projects: Project[] = [
     scope: ["Insulation and services", "Lounge and guest suite", "Built-in joinery and wet bar", "Lighting and flooring"],
   },
   {
-    slug: "capitol-hill-microcement",
-    title: "Capitol Hill Microcement",
-    location: "Capitol Hill, DC",
+    slug: "microcement-surfaces",
+    title: "Microcement Surfaces",
     category: "Surfaces",
     disciplines: ["Surfaces"],
     year: "2024",

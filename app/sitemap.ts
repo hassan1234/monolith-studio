@@ -9,7 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "",
     "/work",
-    "/work/in-progress",
     "/design",
     "/build",
     "/surfaces",

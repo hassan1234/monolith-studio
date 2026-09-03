@@ -16,10 +16,7 @@ export default function WorkPage() {
           <h1>Work</h1>
           <p className="lead">
             A look at completed Monolith projects — design, build and surfaces,
-            delivered by one team.{" "}
-            <Link href="/work/in-progress" style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>
-              See what&rsquo;s on site now ↗
-            </Link>
+            delivered by one team.
           </p>
         </div>
       </header>

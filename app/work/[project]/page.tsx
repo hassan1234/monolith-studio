@@ -26,7 +26,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
         <div className="wrap">
           <Link href="/work" className="svc-back">← Work</Link>
           <span className="eyebrow" style={{ display: "block", marginTop: 18 }}>
-            {p.location} · {p.year}
+            {p.category} · {p.year}
           </span>
           <h1 style={{ fontSize: "var(--text-display)", letterSpacing: "0.01em", textTransform: "none" }}>
             {p.title}

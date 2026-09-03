@@ -9,6 +9,7 @@ type NavLink = {
   href: string;
   label: string;
   discipline?: Service["discipline"];
+  cta?: boolean;
 };
 
 const links: NavLink[] = [
@@ -17,7 +18,7 @@ const links: NavLink[] = [
   { href: "/surfaces", label: "Surfaces", discipline: "surfaces" },
   { href: "/work", label: "Work" },
   { href: "/studio", label: "Studio" },
-  { href: "/contact/start-a-project", label: "Start a Project" },
+  { href: "/contact/start-a-project", label: "Start a Project", cta: true },
 ];
 
 export default function SiteNav() {
@@ -62,10 +63,10 @@ export default function SiteNav() {
           {links.map((l) => {
             const children = l.discipline ? servicesByDiscipline(l.discipline) : [];
             return (
-              <div className="nav-item" key={l.href}>
+              <div className={`nav-item${l.cta ? " nav-item--cta" : ""}`} key={l.href}>
                 <Link
                   href={l.href}
-                  className={isActive(l.href) ? "active" : ""}
+                  className={`${isActive(l.href) ? "active" : ""}${l.cta ? " nav-cta" : ""}`.trim()}
                   onClick={() => setOpen(false)}
                 >
                   {l.label}

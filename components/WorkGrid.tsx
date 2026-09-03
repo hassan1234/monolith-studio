@@ -34,7 +34,7 @@ export default function WorkGrid() {
             </span>
             <span className="work__meta">
               <span className="work__title">{p.title}</span>
-              <span className="work__sub">{p.location} · {p.category}</span>
+              <span className="work__sub">{p.disciplines.join(" · ")}</span>
             </span>
           </Link>
         ))}
