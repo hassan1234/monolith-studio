@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const CONTACT_EMAIL = "hello@monolith.studio"; // TODO: replace with real inbox
+const CONTACT_EMAIL = "hello@monolithstudio.co";
 
 export default function ContactForm() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });

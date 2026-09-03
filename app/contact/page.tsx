@@ -25,7 +25,7 @@ export default function ContactPage() {
           <div>
             <div className="contact__block">
               <span className="eyebrow">Email</span>
-              <a href="mailto:hello@monolith.studio">hello@monolith.studio</a>
+              <a href="mailto:hello@monolithstudio.co">hello@monolithstudio.co</a>
             </div>
             <div className="contact__block">
               <span className="eyebrow">Phone</span>
