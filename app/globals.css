@@ -339,3 +339,18 @@ html { overflow-x: clip; }
 .btypes__item img { object-fit: cover; transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1); }
 .btypes__item:hover img { transform: scale(1.04); }
 .btypes__blurb { margin-top: clamp(24px, 3vw, 36px); max-width: 60ch; color: var(--color-text-dim); font-size: clamp(17px, 1.8vw, 20px); line-height: 1.65; }
+
+/* ── Footer legal links ────────────────────────────────────────────── */
+.footer__legal { display: flex; gap: 22px; flex-wrap: wrap; }
+.footer__legal a { color: var(--color-text-faint); }
+.footer__legal a:hover { color: var(--color-text); }
+
+/* ── Legal / long-form pages (privacy, terms) ──────────────────────── */
+.legal { padding-bottom: var(--space-section); }
+.legal__body { max-width: 68ch; }
+.legal__body h2 { font-family: var(--font-display); font-weight: 300; letter-spacing: 0.02em; font-size: clamp(20px, 2.4vw, 27px); margin: clamp(36px, 5vw, 52px) 0 14px; }
+.legal__body p { color: var(--color-text-dim); font-size: clamp(16px, 1.5vw, 18px); line-height: 1.7; margin-bottom: 16px; }
+.legal__body ul { color: var(--color-text-dim); font-size: clamp(16px, 1.5vw, 18px); line-height: 1.7; margin: 0 0 16px 1.1em; }
+.legal__body li { margin-bottom: 8px; }
+.legal__body a { color: var(--color-text); text-decoration: underline; text-underline-offset: 3px; }
+.legal__updated { font-family: var(--font-mono); font-size: var(--text-caption); letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-text-faint); margin-top: 8px; }

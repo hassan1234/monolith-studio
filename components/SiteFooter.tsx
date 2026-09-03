@@ -20,6 +20,7 @@ export default function SiteFooter() {
               <Link href="/design">Design</Link>
               <Link href="/build">Build</Link>
               <Link href="/surfaces">Surfaces</Link>
+              <Link href="/studio">Studio</Link>
               <Link href="/contact">Contact</Link>
               <a
                 href="https://monolithmicrocement.com"
@@ -33,13 +34,17 @@ export default function SiteFooter() {
         </div>
         <div className="footer__bottom">
           <span>© {new Date().getFullYear()} Monolith. All rights reserved.</span>
-          <a
-            href="https://monolithmicrocement.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            monolithmicrocement.com
-          </a>
+          <span className="footer__legal">
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+            <a
+              href="https://monolithmicrocement.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              monolithmicrocement.com
+            </a>
+          </span>
         </div>
       </div>
     </footer>

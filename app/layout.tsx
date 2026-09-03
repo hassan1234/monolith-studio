@@ -4,6 +4,7 @@ import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.monolithstudio.co"),
   title: "Monolith — Design · Build · Surfaces",
   description:
     "Monolith. One studio across three disciplines — Design, Build and Surfaces. Considered, tactile, made to last.",
