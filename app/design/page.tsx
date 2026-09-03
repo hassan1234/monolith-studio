@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import StyleGrid, { type StyleItem } from "@/components/StyleGrid";
+import { servicesByDiscipline } from "@/lib/services";
 
 export const metadata: Metadata = {
   title: "Design — Monolith",
@@ -95,6 +96,24 @@ export default function DesignPage() {
                   <p>{s.p}</p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Explore — service sub-pages */}
+      <section className="capabilities" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="capabilities__head">
+            <span className="eyebrow">Explore in detail</span>
+            <h2>Design services.</h2>
+          </div>
+          <div className="svc-more">
+            {servicesByDiscipline("design").map((s) => (
+              <Link key={s.slug} href={`${s.parentHref}/${s.slug}`} className="svc-more__item">
+                <span>{s.title}</span>
+                <span className="svc-more__arrow">↗</span>
+              </Link>
             ))}
           </div>
         </div>

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import BuildTypes, { type BuildType } from "@/components/BuildTypes";
+import { servicesByDiscipline } from "@/lib/services";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Surfaces — Monolith",
@@ -117,6 +119,24 @@ export default function SurfacesPage() {
                   <p>{s.p}</p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Explore — service sub-pages */}
+      <section className="capabilities" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="capabilities__head">
+            <span className="eyebrow">Explore in detail</span>
+            <h2>Surfaces services.</h2>
+          </div>
+          <div className="svc-more">
+            {servicesByDiscipline("surfaces").map((s) => (
+              <Link key={s.slug} href={`${s.parentHref}/${s.slug}`} className="svc-more__item">
+                <span>{s.title}</span>
+                <span className="svc-more__arrow">↗</span>
+              </Link>
             ))}
           </div>
         </div>
