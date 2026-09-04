@@ -3,19 +3,17 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { servicesByDiscipline, type Service } from "@/lib/services";
 
 type NavLink = {
   href: string;
   label: string;
-  discipline?: Service["discipline"];
   cta?: boolean;
 };
 
 const links: NavLink[] = [
-  { href: "/design", label: "Design", discipline: "design" },
-  { href: "/build", label: "Build", discipline: "build" },
-  { href: "/surfaces", label: "Surfaces", discipline: "surfaces" },
+  { href: "/design", label: "Design" },
+  { href: "/build", label: "Build" },
+  { href: "/surfaces", label: "Surfaces" },
   { href: "/work", label: "Work" },
   { href: "/studio", label: "Studio" },
   { href: "/contact/start-a-project", label: "Start a Project", cta: true },
@@ -60,35 +58,17 @@ export default function SiteNav() {
         </button>
 
         <div className={`nav-links${open ? " is-open" : ""}`}>
-          {links.map((l) => {
-            const children = l.discipline ? servicesByDiscipline(l.discipline) : [];
-            return (
-              <div className={`nav-item${l.cta ? " nav-item--cta" : ""}`} key={l.href}>
-                <Link
-                  href={l.href}
-                  className={`${isActive(l.href) ? "active" : ""}${l.cta ? " nav-cta" : ""}`.trim()}
-                  onClick={() => setOpen(false)}
-                >
-                  {l.label}
-                </Link>
-                {children.length > 0 && (
-                  <div className="nav-drop">
-                    <div className="nav-drop__box">
-                      {children.map((c) => (
-                        <Link
-                          key={c.slug}
-                          href={`${c.parentHref}/${c.slug}`}
-                          onClick={() => setOpen(false)}
-                        >
-                          {c.title}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+          {links.map((l) => (
+            <div className="nav-item" key={l.href}>
+              <Link
+                href={l.href}
+                className={`${isActive(l.href) ? "active" : ""}${l.cta ? " nav-cta" : ""}`.trim()}
+                onClick={() => setOpen(false)}
+              >
+                {l.label}
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </nav>
