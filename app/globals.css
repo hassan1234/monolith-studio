@@ -464,7 +464,7 @@ html { overflow-x: clip; }
 /* ── Page hero (discipline pages) ──────────────────────────────────── */
 .page-hero { position: relative; min-height: clamp(460px, 72vh, 680px); display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background: #2a201a; }
 .page-hero__img { position: absolute; inset: 0; z-index: 0; }
-.page-hero__img img { width: 100%; height: 100%; object-fit: cover; object-position: center 62%; }
+.page-hero__img img { width: 100%; height: 100%; object-fit: cover; object-position: center 48%; }
 .page-hero__scrim { position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(20,15,10,0.5) 0%, rgba(20,15,10,0.32) 45%, rgba(20,15,10,0.55) 100%); }
 .page-hero__inner { position: relative; z-index: 2; max-width: 900px; padding: 0 var(--space-gutter); }
 .page-hero .eyebrow { display: block; margin-bottom: 20px; color: #cdbfae; }
