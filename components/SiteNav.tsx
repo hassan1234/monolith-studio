@@ -22,6 +22,9 @@ const links: NavLink[] = [
 export default function SiteNav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  // On the home page the nav stays hidden over the hero and appears once
+  // you scroll past it. On every other page the nav is always shown.
+  const [revealed, setRevealed] = useState(pathname !== "/");
 
   useEffect(() => {
     setOpen(false);
@@ -34,15 +37,28 @@ export default function SiteNav() {
     };
   }, [open]);
 
+  useEffect(() => {
+    if (pathname !== "/") {
+      setRevealed(true);
+      return;
+    }
+    const onScroll = () =>
+      setRevealed(window.scrollY > window.innerHeight - 90);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [pathname]);
+
   const isActive = (href: string) =>
     pathname === href || pathname.startsWith(href + "/");
 
   return (
-    <nav className={`nav${open ? " nav--open" : ""}`}>
+    <nav
+      className={`nav${open ? " nav--open" : ""}${revealed || open ? "" : " nav--hidden"}`}
+    >
       <div className="nav-inner">
         <Link href="/" className="nav-brand" onClick={() => setOpen(false)}>
           <span className="wordmark">Monolith</span>
-          <span className="wordmark__sub">Design · Build · Surfaces</span>
         </Link>
 
         <button

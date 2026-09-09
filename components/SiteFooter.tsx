@@ -7,11 +7,6 @@ export default function SiteFooter() {
         <div className="footer__top">
           <div>
             <span className="wordmark">Monolith</span>
-            <span className="wordmark__sub">Design · Build · Surfaces</span>
-            <p className="footer__tag">
-              One studio across three disciplines. Considered spaces shaped from
-              first line to final surface.
-            </p>
           </div>
           <div>
             <p className="footer__col-label">Explore</p>
