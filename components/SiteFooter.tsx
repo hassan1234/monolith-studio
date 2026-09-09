@@ -6,9 +6,6 @@ export default function SiteFooter() {
       <div className="wrap">
         <div className="footer__top">
           <div>
-            <span className="wordmark">Monolith</span>
-          </div>
-          <div>
             <p className="footer__col-label">Explore</p>
             <nav className="footer__nav" aria-label="Footer">
               <Link href="/">Home</Link>
@@ -43,6 +40,7 @@ export default function SiteFooter() {
           </span>
         </div>
       </div>
+      <span className="footer__watermark" aria-hidden="true">Monolith</span>
     </footer>
   );
 }
