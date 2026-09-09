@@ -74,7 +74,7 @@ img { display: block; max-width: 100%; }
 .wordmark__sub { font-family: var(--font-mono); text-transform: uppercase; color: var(--color-text-dim); }
 
 /* ── Nav ───────────────────────────────────────────────────────────── */
-.nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--color-bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--hairline); transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease; }
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: color-mix(in srgb, var(--color-bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--hairline); transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.45s ease; }
 .nav--hidden { transform: translateY(-100%); opacity: 0; pointer-events: none; }
 .nav-inner { max-width: var(--max-width); margin: 0 auto; padding: 20px var(--space-gutter); display: flex; align-items: center; justify-content: space-between; }
 .nav .wordmark { font-size: 20px; letter-spacing: 0.22em; }
