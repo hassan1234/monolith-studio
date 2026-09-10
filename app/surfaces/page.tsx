@@ -77,20 +77,23 @@ const journey = [
 export default function SurfacesPage() {
   return (
     <main>
-      <header className="page-head">
-        <div className="wrap">
+      <header className="page-hero">
+        <div className="page-hero__img" aria-hidden="true">
+          <Image src="/images/surfaces-hero.jpg" alt="" fill priority sizes="100vw" />
+        </div>
+        <span className="page-hero__scrim" aria-hidden="true" />
+        <div className="page-hero__inner">
           <span className="eyebrow">Surfaces &amp; Finishes</span>
           <h1>Surfaces</h1>
-          <p className="lead">
+          <p className="page-hero__lead">
             Seamless, hand-applied mineral finishes — the final, tactile layer
-            that gives a space its character and calm. Explore the finishes,
-            then see how we bring them to life.
+            that gives a space its character and calm.
           </p>
         </div>
       </header>
 
       {/* The finishes — clickable options */}
-      <section className="capabilities" style={{ paddingTop: 0 }}>
+      <section className="capabilities">
         <div className="wrap">
           <div className="capabilities__head">
             <span className="eyebrow">The Finishes</span>
