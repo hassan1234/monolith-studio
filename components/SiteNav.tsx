@@ -14,8 +14,6 @@ const links: NavLink[] = [
   { href: "/design", label: "Design" },
   { href: "/build", label: "Build" },
   { href: "/surfaces", label: "Surfaces" },
-  { href: "/work", label: "Work" },
-  { href: "/studio", label: "Studio" },
   { href: "/contact/start-a-project", label: "Start a Project", cta: true },
 ];
 
