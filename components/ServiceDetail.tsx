@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import PaletteExplorer from "@/components/PaletteExplorer";
 import type { Service } from "@/lib/services";
 
 export default function ServiceDetail({
@@ -59,6 +60,18 @@ export default function ServiceDetail({
           <Image src={service.images[1]} alt={service.title} width={1600} height={900} />
         </div>
       </div>
+
+      {service.palette && (
+        <section className="capabilities" style={{ paddingTop: "clamp(48px, 7vw, 96px)" }}>
+          <div className="wrap">
+            <div className="capabilities__head">
+              <span className="eyebrow">Explore the color palette</span>
+              <h2>{service.title} in color.</h2>
+            </div>
+            <PaletteExplorer colors={service.palette} finish={service.title} />
+          </div>
+        </section>
+      )}
 
       {service.microcementStudio && (
         <section className="wrap" style={{ marginTop: "clamp(48px, 7vw, 96px)" }}>

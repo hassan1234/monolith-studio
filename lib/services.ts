@@ -1,3 +1,12 @@
+export type PaletteColor = {
+  /** Shown under the swatch. */
+  name: string;
+  /** Swatch fill — approximates the finish so the button reads before the photo loads. */
+  hex: string;
+  /** Close-up of a plain wall in this color and finish. */
+  image: string;
+};
+
 export type Service = {
   slug: string;
   discipline: "design" | "build" | "surfaces";
@@ -8,6 +17,8 @@ export type Service = {
   body: string[];
   included: string[];
   images: [string, string];
+  /** Surfaces only: real color options available in this finish. */
+  palette?: PaletteColor[];
   microcementStudio?: boolean;
 };
 
@@ -22,7 +33,7 @@ export const services: Service[] = [
       "From first concept and mood boards to detailed, buildable drawings, every decision is made with the finished feeling in mind, not just the plan.",
     ],
     included: ["Full room and whole-home schemes", "Material, color and lighting design", "Custom millwork and furniture layouts", "Detailed drawings ready to build"],
-    images: ["/images/design-living-modern.jpg", "/images/style-modern-1.jpg"],
+    images: ["/images/design-living-modern.jpg", "/images/style-japandi-interior.jpg"],
   },
   {
     slug: "exterior-design", discipline: "design", parentHref: "/design", parentLabel: "Design",
@@ -126,6 +137,12 @@ export const services: Service[] = [
     ],
     included: ["Floors, walls and wet rooms", "Seamless, jointless surfaces", "A range of warm neutral tones", "Sealed and protected for daily life"],
     images: ["/images/fin-microcement-1.jpg", "/images/fin-microcement-2.jpg"],
+    palette: [
+      { name: "Pearl Grey", hex: "#BFBEBF", image: "/images/palette/microcement-pearl-grey.jpg" },
+      { name: "Bone", hex: "#CCC6BB", image: "/images/palette/microcement-bone.jpg" },
+      { name: "Sand", hex: "#C6B29A", image: "/images/palette/microcement-sand.jpg" },
+      { name: "Graphite", hex: "#565556", image: "/images/palette/microcement-graphite.jpg" },
+    ],
     microcementStudio: true,
   },
   {
@@ -138,6 +155,12 @@ export const services: Service[] = [
     ],
     included: ["Walls and feature surfaces", "Soft, cloudy matte finish", "Warm neutral and tinted tones", "Breathable, natural mineral paint"],
     images: ["/images/fin-limewash-1.jpg", "/images/fin-limewash-2.jpg"],
+    palette: [
+      { name: "Chalk White", hex: "#DDDDDD", image: "/images/palette/limewash-chalk-white.jpg" },
+      { name: "Oatmeal", hex: "#BEB5A7", image: "/images/palette/limewash-oatmeal.jpg" },
+      { name: "Clay Rose", hex: "#B37567", image: "/images/palette/limewash-clay-rose.jpg" },
+      { name: "Sage", hex: "#929785", image: "/images/palette/limewash-sage.jpg" },
+    ],
   },
   {
     slug: "tadelakt", discipline: "surfaces", parentHref: "/surfaces", parentLabel: "Surfaces",
@@ -149,6 +172,12 @@ export const services: Service[] = [
     ],
     included: ["Showers and wet rooms", "Seamless, waterproof surface", "Warm earthy tones", "Subtle hand-polished sheen"],
     images: ["/images/fin-tadelakt-1.jpg", "/images/fin-tadelakt-2.jpg"],
+    palette: [
+      { name: "Natural Ivory", hex: "#DFDAD1", image: "/images/palette/tadelakt-natural-ivory.jpg" },
+      { name: "Ochre", hex: "#CF9636", image: "/images/palette/tadelakt-ochre.jpg" },
+      { name: "Terracotta Rose", hex: "#C58D78", image: "/images/palette/tadelakt-terracotta-rose.jpg" },
+      { name: "Charcoal", hex: "#58585A", image: "/images/palette/tadelakt-charcoal.jpg" },
+    ],
   },
   {
     slug: "lime-plaster", discipline: "surfaces", parentHref: "/surfaces", parentLabel: "Surfaces",
@@ -160,6 +189,12 @@ export const services: Service[] = [
     ],
     included: ["Interior walls and ceilings", "Soft matte mineral texture", "Breathable and humidity-regulating", "Warm, timeless tones"],
     images: ["/images/fin-lime-1.jpg", "/images/fin-lime-2.jpg"],
+    palette: [
+      { name: "Marble White", hex: "#D5D3CF", image: "/images/palette/lime-plaster-marble-white.jpg" },
+      { name: "Sand", hex: "#C4B296", image: "/images/palette/lime-plaster-sand.jpg" },
+      { name: "Greige", hex: "#B1ACA3", image: "/images/palette/lime-plaster-greige.jpg" },
+      { name: "Umber", hex: "#573E30", image: "/images/palette/lime-plaster-umber.jpg" },
+    ],
   },
   {
     slug: "vanishing-plaster", discipline: "surfaces", parentHref: "/surfaces", parentLabel: "Surfaces",
@@ -171,6 +206,12 @@ export const services: Service[] = [
     ],
     included: ["Feature walls and refined spaces", "Smooth, polished finish", "Subtle sheen and depth", "Marble-like tonal movement"],
     images: ["/images/fin-vanishing-1.jpg", "/images/fin-vanishing-2.jpg"],
+    palette: [
+      { name: "Chalk", hex: "#EAEAEA", image: "/images/palette/vanishing-plaster-chalk.jpg" },
+      { name: "Bone", hex: "#E3DACE", image: "/images/palette/vanishing-plaster-bone.jpg" },
+      { name: "Mushroom", hex: "#9B8D85", image: "/images/palette/vanishing-plaster-mushroom.jpg" },
+      { name: "Stone Grey", hex: "#A09D9D", image: "/images/palette/vanishing-plaster-stone-grey.jpg" },
+    ],
   },
   {
     slug: "palette", discipline: "surfaces", parentHref: "/surfaces", parentLabel: "Surfaces",
@@ -182,6 +223,12 @@ export const services: Service[] = [
     ],
     included: ["Custom color matching", "Pigment through the material", "Soft neutrals to deep tones", "Color that ages gracefully"],
     images: ["/images/fin-pigment-1.jpg", "/images/fin-pigment-2.jpg"],
+    palette: [
+      { name: "Ochre", hex: "#D1962C", image: "/images/palette/palette-ochre.jpg" },
+      { name: "Terracotta", hex: "#CA7954", image: "/images/palette/palette-terracotta.jpg" },
+      { name: "Olive", hex: "#787352", image: "/images/palette/palette-olive.jpg" },
+      { name: "Indigo", hex: "#3D5177", image: "/images/palette/palette-indigo.jpg" },
+    ],
   },
 ];
 
