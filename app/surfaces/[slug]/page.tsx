@@ -12,7 +12,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const s = getService("surfaces", params.slug);
   if (!s) return {};
-  return { title: `${s.title} — Monolith Usurfaces`, description: s.lead };
+  return { title: `${s.title} — Monolith`, description: s.lead };
 }
 
 export default function Page({ params }: { params: { slug: string } }) {

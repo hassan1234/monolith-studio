@@ -68,7 +68,11 @@ export default function BuildPage() {
   return (
     <main>
       <header className="page-hero">
-        <div className="page-hero__img" aria-hidden="true">
+        <div
+          className="page-hero__img"
+          aria-hidden="true"
+          style={{ "--hero-focus-mobile": "72% center" } as React.CSSProperties}
+        >
           <Image src="/images/build-hero.jpg" alt="" fill priority sizes="100vw" />
         </div>
         <span className="page-hero__scrim" aria-hidden="true" />

@@ -3,8 +3,8 @@ import Image from "next/image";
 
 const cards = [
   { href: "/design", name: "Design", meta: "Kitchens · Bathrooms · Living", img: "/images/design-living-modern.jpg" },
-  { href: "/build", name: "Build", meta: "Kitchens · Bathrooms · Remodels", img: "/images/build-modern-kitchen.jpg" },
-  { href: "/surfaces", name: "Surfaces", meta: "Microcement · Limewash · Plaster", img: "/images/surfaces-1.jpg" },
+  { href: "/build", name: "Build", meta: "Kitchens · Bathrooms · Remodels", img: "/images/home-build.jpg" },
+  { href: "/surfaces", name: "Surfaces", meta: "Microcement · Limewash · Plaster", img: "/images/home-surfaces.jpg" },
 ];
 
 const whatWeDo = [
