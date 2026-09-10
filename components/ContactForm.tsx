@@ -13,7 +13,7 @@ export default function ContactForm() {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Enquiry from ${form.name || "the website"}`);
+    const subject = encodeURIComponent(`Inquiry from ${form.name || "the website"}`);
     const body = encodeURIComponent(
       `${form.message}\n\n— ${form.name}${form.email ? ` (${form.email})` : ""}`
     );
@@ -35,7 +35,7 @@ export default function ContactForm() {
         <textarea id="message" name="message" value={form.message} onChange={update("message")} required />
       </div>
       <div className="form__actions">
-        <button className="btn" type="submit">Send enquiry ↗</button>
+        <button className="btn" type="submit">Send inquiry ↗</button>
         <p className="form__note">
           Opens in your email app. Prefer to write directly? {CONTACT_EMAIL}
         </p>

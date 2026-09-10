@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms of Service — Monolith",
-  description: "The terms that apply to using the Monolith website and enquiring about our services.",
+  description: "The terms that apply to using the Monolith website and inquiring about our services.",
 };
 
 export default function TermsPage() {
@@ -36,7 +36,7 @@ export default function TermsPage() {
 
           <h2>No project agreement until it&rsquo;s in writing</h2>
           <p>
-            Nothing on this site, and no enquiry you send through it, forms a
+            Nothing on this site, and no inquiry you send through it, forms a
             contract. Any project we take on is governed by a separate written
             proposal and agreement that sets out the scope, price and terms for
             that specific work.

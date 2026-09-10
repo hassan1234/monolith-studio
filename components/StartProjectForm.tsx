@@ -22,7 +22,7 @@ export default function StartProjectForm() {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Project brief — ${form.name || "new enquiry"} (${form.type})`);
+    const subject = encodeURIComponent(`Project brief — ${form.name || "new inquiry"} (${form.type})`);
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nLocation: ${form.location}\n\n` +
       `Project type: ${form.type}\nBudget: ${form.budget}\nTimeline: ${form.timeline}\n\n` +
@@ -49,7 +49,7 @@ export default function StartProjectForm() {
       </div>
       <div className="field">
         <label htmlFor="location">Project location</label>
-        <input id="location" type="text" value={form.location} onChange={upd("location")} placeholder="Neighbourhood or city" />
+        <input id="location" type="text" value={form.location} onChange={upd("location")} placeholder="Neighborhood or city" />
       </div>
       <div className="form__row">
         <div className="field">

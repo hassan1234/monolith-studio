@@ -46,7 +46,7 @@ export default function DcPage() {
         <div className="wrap">
           <div className="capabilities__head">
             <span className="eyebrow">Where we work</span>
-            <h2>Neighbourhoods we serve.</h2>
+            <h2>Neighborhoods we serve.</h2>
           </div>
           <div className="dgrid">
             {areas.map((a) => (

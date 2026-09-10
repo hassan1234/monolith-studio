@@ -68,7 +68,7 @@ export default function ServiceDetail({
               <h2>Explore our dedicated microcement studio.</h2>
               <p>
                 Our seamless microcement work has its own home — full ranges,
-                colours, applications and project galleries.
+                colors, applications and project galleries.
               </p>
             </div>
             <div>

@@ -45,7 +45,7 @@ const journey = [
     h: "3D Renderings & Specifications",
     img: "/images/journey-render.jpg",
     alt: "Photorealistic 3D interior rendering",
-    p: "See your exact space before it exists. We create realistic 3D renderings and finalize exact technical specifications, ensuring a flawless handover to execution.",
+    p: "See your exact space before it exists. We create realistic 3D renderings and finalize exact technical specifications, ensuring a flawless handoff to execution.",
   },
 ];
 

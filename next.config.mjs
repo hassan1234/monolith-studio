@@ -2,6 +2,7 @@
 const nextConfig = {
   async redirects() {
     return [
+      { source: "/design/3d-visualisation", destination: "/design/3d-visualization", permanent: true },
       { source: "/studio/faq", destination: "/studio", permanent: true },
       { source: "/studio/process", destination: "/studio", permanent: true },
       { source: "/work/in-progress", destination: "/work", permanent: true },

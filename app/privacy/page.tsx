@@ -36,7 +36,7 @@ export default function PrivacyPage() {
 
           <h2>How we use it</h2>
           <ul>
-            <li>To respond to your enquiry and discuss your project.</li>
+            <li>To respond to your inquiry and discuss your project.</li>
             <li>To provide, quote for and deliver design, build and surfaces services.</li>
             <li>To improve our website and services.</li>
           </ul>
@@ -52,7 +52,7 @@ export default function PrivacyPage() {
 
           <h2>Data retention & security</h2>
           <p>
-            We keep project and enquiry information only as long as necessary for
+            We keep project and inquiry information only as long as necessary for
             the purposes above or as required by law, and we take reasonable
             measures to protect it.
           </p>

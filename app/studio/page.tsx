@@ -21,7 +21,7 @@ const reasons = [
   {
     n: "03",
     h: "Priced with no surprises",
-    p: "A clear, itemised proposal before any work begins, and a realistic programme you can actually plan around.",
+    p: "A clear, itemized proposal before any work begins, and a realistic schedule you can actually plan around.",
   },
   {
     n: "04",
@@ -41,15 +41,15 @@ const faqs = [
   },
   {
     q: "How much does a project cost?",
-    a: "Every project is scoped individually — it depends on the rooms, the structural work and the finishes involved. After an initial conversation we provide a clear, itemised proposal before any work begins.",
+    a: "Every project is scoped individually — it depends on the rooms, the structural work and the finishes involved. After an initial conversation we provide a clear, itemized proposal before any work begins.",
   },
   {
     q: "How long does a typical project take?",
-    a: "A single-room remodel is usually a matter of weeks; a whole-home renovation runs months. We give you a realistic programme up front and keep you updated as we go.",
+    a: "A single-room remodel is usually a matter of weeks; a whole-home renovation runs months. We give you a realistic schedule up front and keep you updated as we go.",
   },
   {
     q: "What is microcement, and do I need the separate studio?",
-    a: "Microcement is a seamless, hard-wearing mineral finish. We apply it as part of our surfaces work, and our dedicated microcement studio has the full ranges and galleries if you want to go deeper.",
+    a: "Microcement is a seamless, durable mineral finish. We apply it as part of our surfaces work, and our dedicated microcement studio has the full ranges and galleries if you want to go deeper.",
   },
   {
     q: "What happens after I get in touch?",

@@ -25,10 +25,10 @@ export const projects: Project[] = [
     hero: "/images/build-modern-kitchen.jpg",
     gallery: ["/images/buildtype-living-1.jpg", "/images/design-living-modern.jpg", "/images/buildtype-kitchen-2.jpg"],
     body: [
-      "We reworked the ground floor into an open, sociable plan, added bespoke joinery throughout, and carried a single warm material palette from the kitchen to the living spaces.",
+      "We reworked the main floor into an open plan made for entertaining, added custom millwork throughout, and carried a single warm material palette from the kitchen to the living spaces.",
       "Because the same team designed and built the project, the finished home matches the drawings exactly — down to the last reveal.",
     ],
-    scope: ["Full-home design and layout", "Structural reconfiguration", "Bespoke kitchen and joinery", "Seamless mineral surfaces"],
+    scope: ["Full-home design and layout", "Structural reconfiguration", "Custom kitchen and millwork", "Seamless mineral surfaces"],
   },
   {
     slug: "kitchen-remodel",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
       "New cabinetry, a natural stone island and reworked services turned a cramped galley into a generous, hard-working kitchen.",
       "We visualised the space in 3D before a single cabinet was ordered, so every decision was signed off with confidence.",
     ],
-    scope: ["New layout and cabinetry", "Stone worktops and island", "Appliances and services", "Lighting and finishes"],
+    scope: ["New layout and cabinetry", "Stone countertops and island", "Appliances and utilities", "Lighting and finishes"],
   },
   {
     slug: "bathroom-remodel",
@@ -58,7 +58,7 @@ export const projects: Project[] = [
       "We rebuilt the room with correct waterproofing, a walk-in shower and a floating oak vanity, then finished the walls in hand-polished tadelakt.",
       "The result is warm, tactile and completely jointless.",
     ],
-    scope: ["Strip-out and waterproofing", "Walk-in shower and vanity", "Tadelakt wall finish", "Brass fixtures and lighting"],
+    scope: ["Demolition and waterproofing", "Walk-in shower and vanity", "Tadelakt wall finish", "Brass fixtures and lighting"],
   },
   {
     slug: "basement-renovation",
@@ -73,7 +73,7 @@ export const projects: Project[] = [
       "We tackled damp, low ceilings and awkward services to create a genuinely usable room — a cosy lounge with a wet bar and a guest space.",
       "Warm lighting and engineered oak flooring make it feel like a natural part of the home.",
     ],
-    scope: ["Insulation and services", "Lounge and guest suite", "Built-in joinery and wet bar", "Lighting and flooring"],
+    scope: ["Insulation, plumbing and electrical", "Living room and guest suite", "Built-in millwork and wet bar", "Lighting and flooring"],
   },
   {
     slug: "microcement-surfaces",
@@ -86,7 +86,7 @@ export const projects: Project[] = [
     gallery: ["/images/surfaces-1.jpg", "/images/fin-limewash-1.jpg"],
     body: [
       "We applied continuous microcement across the floors and key walls, tying the whole level together in one warm, jointless plane.",
-      "Sealed for daily life, it is as hard-wearing as it is calm to look at.",
+      "Sealed for daily life, it is as durable as it is calm to look at.",
     ],
     scope: ["Microcement floors and walls", "Warm neutral palette", "Sealed and protected", "Feature limewash walls"],
   },

@@ -21,7 +21,7 @@ export const services: Service[] = [
       "We design complete interiors — kitchens, living spaces, bedrooms, bathrooms and everything between — balancing proportion, materials and light into rooms that feel effortless to be in.",
       "From first concept and mood boards to detailed, buildable drawings, every decision is made with the finished feeling in mind, not just the plan.",
     ],
-    included: ["Full room and whole-home schemes", "Material, colour and lighting design", "Bespoke joinery and furniture layouts", "Detailed drawings ready to build"],
+    included: ["Full room and whole-home schemes", "Material, color and lighting design", "Custom millwork and furniture layouts", "Detailed drawings ready to build"],
     images: ["/images/design-living-modern.jpg", "/images/style-modern-1.jpg"],
   },
   {
@@ -40,19 +40,19 @@ export const services: Service[] = [
     title: "Space Planning",
     lead: "The invisible work that makes a home feel effortless — flow, proportion and function resolved before anything is built.",
     body: [
-      "We map how you move through a space and optimise every square foot for the way you actually live, testing structural possibilities before committing a line to paper.",
+      "We map how you move through a space and optimize every square foot for the way you actually live, testing structural possibilities before committing a line to paper.",
       "Good planning is the difference between a room that works and one you quietly fight with every day.",
     ],
     included: ["Layout and circulation studies", "Structural and functional feasibility", "Furniture and fixture planning", "Scaled floor plans and elevations"],
     images: ["/images/journey-plan.jpg", "/images/journey-moodboard.jpg"],
   },
   {
-    slug: "3d-visualisation", discipline: "design", parentHref: "/design", parentLabel: "Design",
-    title: "3D Visualisation",
+    slug: "3d-visualization", discipline: "design", parentHref: "/design", parentLabel: "Design",
+    title: "3D Visualization",
     lead: "See your exact space before it exists — photorealistic renderings that turn a plan into something you can feel.",
     body: [
       "We create realistic 3D renderings of your design so you can walk through material, light and layout decisions with total confidence, long before the build begins.",
-      "Alongside the visuals we finalise exact technical specifications for a flawless handover to construction.",
+      "Alongside the visuals we finalize exact technical specifications for a flawless handoff to construction.",
     ],
     included: ["Photorealistic 3D renderings", "Material and lighting studies", "Design sign-off before build", "Technical specifications and schedules"],
     images: ["/images/journey-render.jpg", "/images/journey-plan.jpg"],
@@ -62,12 +62,12 @@ export const services: Service[] = [
   {
     slug: "kitchen-remodel", discipline: "build", parentHref: "/build", parentLabel: "Build",
     title: "Kitchen Remodel",
-    lead: "The whole kitchen rebuilt around how you cook — new layout, cabinetry, worktops, appliances and services.",
+    lead: "The whole kitchen rebuilt around how you cook — new layout, cabinetry, countertops, appliances and utilities.",
     body: [
       "We strip out the old and build the new: a kitchen planned for the way you actually use it, then constructed and finished to last.",
       "One team handles design through to the final coat, so the result matches the drawing exactly.",
     ],
-    included: ["New layouts and cabinetry", "Worktops, splashbacks and tiling", "Appliance and services installation", "Lighting and final finishes"],
+    included: ["New layouts and cabinetry", "Countertops, backsplashes and tiling", "Appliance and utility installation", "Lighting and final finishes"],
     images: ["/images/buildtype-kitchen-1.jpg", "/images/buildtype-kitchen-2.jpg"],
   },
   {
@@ -75,7 +75,7 @@ export const services: Service[] = [
     title: "Bathroom Remodel",
     lead: "A full re-do from the studs out — new layout, waterproofing, tiling, vanities, showers and fixtures.",
     body: [
-      "We rebuild bathrooms properly: correct waterproofing, precise tiling and bespoke joinery, so your new bathroom stays as good as the day it was finished.",
+      "We rebuild bathrooms properly: correct waterproofing, precise tiling and custom millwork, so your new bathroom stays as good as the day it was finished.",
       "From a compact ensuite to a spa-like main bathroom, every detail is resolved.",
     ],
     included: ["New layouts and waterproofing", "Tiling, vanities and fixtures", "Walk-in showers and tubs", "Heating, lighting and ventilation"],
@@ -84,18 +84,18 @@ export const services: Service[] = [
   {
     slug: "basement-renovation", discipline: "build", parentHref: "/build", parentLabel: "Build",
     title: "Basement Renovation",
-    lead: "Unused space turned into a proper room — a lounge, media room, gym or guest suite, fully finished.",
+    lead: "Unused space turned into a proper room — a living room, media room, gym or guest suite, fully finished.",
     body: [
-      "We transform basements into warm, usable rooms — handling insulation, lighting, joinery and finishes so the space feels like a natural part of the home, not an afterthought.",
+      "We transform basements into warm, usable rooms — handling insulation, lighting, millwork and finishes so the space feels like a natural part of the home, not an afterthought.",
       "Damp, low ceilings and awkward services are all part of the brief.",
     ],
-    included: ["Lounges, media rooms and gyms", "Guest suites and home offices", "Insulation, lighting and services", "Built-in joinery and finishes"],
+    included: ["Living rooms, media rooms and gyms", "Guest suites and home offices", "Insulation, lighting, plumbing and electrical", "Built-in millwork and finishes"],
     images: ["/images/buildtype-basement-1.jpg", "/images/buildtype-basement-2.jpg"],
   },
   {
     slug: "living-spaces", discipline: "build", parentHref: "/build", parentLabel: "Build",
     title: "Living Spaces",
-    lead: "Reconfigured layouts, built-in joinery, fireplaces and feature walls that change how a room lives.",
+    lead: "Reconfigured layouts, built-in millwork, fireplaces and feature walls that change how a room lives.",
     body: [
       "We rework living and dining spaces — opening up plans, adding built-ins and feature walls, and rebuilding the everyday rooms around how you gather.",
       "Structural changes and finishing details, all under one team.",
@@ -109,7 +109,7 @@ export const services: Service[] = [
     lead: "Larger projects taken on end to end — from opening up plans to the final coat of paint.",
     body: [
       "When it is the whole house, one coherent team keeps every room, service and finish pulling in the same direction — no gaps between trades, no lost intent.",
-      "We manage the programme from strip-out to handover.",
+      "We manage the schedule from demolition to final walkthrough.",
     ],
     included: ["Full-home design and build", "Structural and layout changes", "All rooms, services and finishes", "End-to-end project management"],
     images: ["/images/build-modern-kitchen.jpg", "/images/buildtype-living-1.jpg"],
@@ -119,7 +119,7 @@ export const services: Service[] = [
   {
     slug: "microcement", discipline: "surfaces", parentHref: "/surfaces", parentLabel: "Surfaces",
     title: "Microcement",
-    lead: "Seamless, hard-wearing mineral surfaces poured over floors, walls and joinery — jointless and quietly tactile.",
+    lead: "Seamless, durable mineral surfaces poured over floors, walls and millwork — jointless and quietly tactile.",
     body: [
       "A thin cementitious coat applied by hand over almost any substrate, microcement turns floors, walls and even furniture into continuous, grout-free planes.",
       "Waterproof and durable, it suits everything from wet rooms to high-traffic floors — and it has its own dedicated studio.",
@@ -175,12 +175,12 @@ export const services: Service[] = [
   {
     slug: "palette", discipline: "surfaces", parentHref: "/surfaces", parentLabel: "Surfaces",
     title: "Pigment & Palette",
-    lead: "Colour worked into the material itself — from soft neutrals to deep, saturated tones — so a finish keeps its depth and never simply wears off.",
+    lead: "Color worked into the material itself — from soft neutrals to deep, saturated tones — so a finish keeps its depth and never simply wears off.",
     body: [
-      "Every finish can be tinted with mineral pigment, so colour lives in the material rather than sitting on top of it.",
-      "We build bespoke palettes with you, from the softest warm neutrals to rich, saturated tones.",
+      "Every finish can be tinted with mineral pigment, so color lives in the material rather than sitting on top of it.",
+      "We build custom palettes with you, from the softest warm neutrals to rich, saturated tones.",
     ],
-    included: ["Bespoke colour matching", "Pigment through the material", "Soft neutrals to deep tones", "Colour that ages gracefully"],
+    included: ["Custom color matching", "Pigment through the material", "Soft neutrals to deep tones", "Color that ages gracefully"],
     images: ["/images/fin-pigment-1.jpg", "/images/fin-pigment-2.jpg"],
   },
 ];

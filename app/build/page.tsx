@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const buildTypes: BuildType[] = [
   {
     name: "Kitchen Remodels",
-    blurb: "New layouts, cabinetry, worktops, appliances and services — the whole kitchen rebuilt around how you cook.",
+    blurb: "New layouts, cabinetry, countertops, appliances and utilities — the whole kitchen rebuilt around how you cook.",
     images: ["/images/buildtype-kitchen-1.jpg", "/images/buildtype-kitchen-2.jpg"],
   },
   {
@@ -23,12 +23,12 @@ const buildTypes: BuildType[] = [
   },
   {
     name: "Living Spaces",
-    blurb: "Reconfigured layouts, built-in joinery, fireplaces and feature walls that change how a room lives.",
+    blurb: "Reconfigured layouts, built-in millwork, fireplaces and feature walls that change how a room lives.",
     images: ["/images/buildtype-living-1.jpg", "/images/buildtype-living-2.jpg"],
   },
   {
     name: "Basements",
-    blurb: "Unused space turned into a proper room — lounge, media room, gym or guest suite, fully finished.",
+    blurb: "Unused space turned into a proper room — living room, media room, gym or guest suite, fully finished.",
     images: ["/images/buildtype-basement-1.jpg", "/images/buildtype-basement-2.jpg"],
   },
 ];
@@ -43,7 +43,7 @@ const journey = [
   },
   {
     n: "02",
-    h: "Strip-out",
+    h: "Demolition",
     img: "/images/build-journey-stripout.jpg",
     alt: "The old kitchen being stripped out",
     p: "Careful removal of the old, with the site kept clean, protected and controlled throughout — ready for a fresh start.",
@@ -53,14 +53,14 @@ const journey = [
     h: "Build",
     img: "/images/build-journey-build.jpg",
     alt: "New cabinetry and structure going in",
-    p: "Structure, services, joinery and tiling built to spec by trades who care about tolerances and get the details right.",
+    p: "Structure, plumbing and electrical, millwork and tiling built to spec by trades who care about tolerances and get the details right.",
   },
   {
     n: "04",
     h: "Finish",
     img: "/images/build-journey-finish.jpg",
     alt: "The finished, move-in-ready kitchen",
-    p: "Snagging, final finishes and a clean handover — a room that is fully resolved and ready to live in.",
+    p: "A final punch list, last finishes and a clean handoff — a room that is fully resolved and ready to live in.",
   },
 ];
 

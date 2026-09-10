@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const finishes: BuildType[] = [
   {
     name: "Microcement",
-    blurb: "A thin, hard-wearing cementitious coat applied over floors, walls and joinery. Completely seamless — no grout lines, no joints — with a smooth, quietly tactile surface.",
+    blurb: "A thin, durable cementitious coat applied over floors, walls and millwork. Completely seamless — no grout lines, no joints — with a smooth, quietly tactile surface.",
     images: ["/images/fin-microcement-1.jpg", "/images/fin-microcement-2.jpg"],
   },
   {
@@ -37,8 +37,8 @@ const finishes: BuildType[] = [
     images: ["/images/fin-lime-1.jpg", "/images/fin-lime-2.jpg"],
   },
   {
-    name: "Pigment & Colour",
-    blurb: "Colour worked into the material itself rather than painted on top — from soft neutrals to deep, saturated tones — so the finish keeps its depth and never simply wears off.",
+    name: "Pigment & Color",
+    blurb: "Color worked into the material itself rather than painted on top — from soft neutrals to deep, saturated tones — so the finish keeps its depth and never simply wears off.",
     images: ["/images/fin-pigment-1.jpg", "/images/fin-pigment-2.jpg"],
   },
 ];
@@ -153,7 +153,7 @@ export default function SurfacesPage() {
             <h2>Explore our dedicated microcement studio.</h2>
             <p>
               Our seamless microcement work has its own home — full ranges,
-              colours, applications and project galleries.
+              colors, applications and project galleries.
             </p>
           </div>
           <div>
