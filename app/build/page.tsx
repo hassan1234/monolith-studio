@@ -67,20 +67,23 @@ const journey = [
 export default function BuildPage() {
   return (
     <main>
-      <header className="page-head">
-        <div className="wrap">
+      <header className="page-hero">
+        <div className="page-hero__img" aria-hidden="true">
+          <Image src="/images/build-hero.jpg" alt="" fill priority sizes="100vw" />
+        </div>
+        <span className="page-hero__scrim" aria-hidden="true" />
+        <div className="page-hero__inner">
           <span className="eyebrow">Interior Remodels &amp; Builds</span>
           <h1>Build</h1>
-          <p className="lead">
-            We remodel the inside of homes — a bathroom fully redone, a kitchen
-            rebuilt, a whole floor reconfigured. New layouts, new fixtures, new
-            finishes, taken from survey to the final coat.
+          <p className="page-hero__lead">
+            We remodel the inside of homes — from a single bathroom to a whole
+            floor reconfigured, taken from survey to the final coat.
           </p>
         </div>
       </header>
 
       {/* What we build — clickable types */}
-      <section className="capabilities" style={{ paddingTop: 0 }}>
+      <section className="capabilities">
         <div className="wrap">
           <div className="capabilities__head">
             <span className="eyebrow">What we build</span>
