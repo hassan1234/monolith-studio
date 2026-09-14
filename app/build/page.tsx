@@ -36,42 +36,42 @@ const buildTypes: BuildType[] = [
 const scope = [
   {
     h: "Structural work",
-    p: "Walls taken out, steel and new openings formed, layouts reworked — with the structural design coordinated as part of the build rather than handed to you as a separate problem.",
+    p: "Walls out, steel in, new openings formed — with the structural design handled as part of the build.",
   },
   {
     h: "Plumbing and electrical",
-    p: "New runs, relocated utilities, panels, circuits and lighting set out early, so nothing has to be chased into a finished wall later.",
+    p: "New runs, panels, circuits and lighting set out early, so nothing gets chased into a finished wall.",
   },
   {
     h: "Cabinetry and millwork",
-    p: "Custom cabinetry, wardrobes, media walls and built-in storage, made to the drawing and fitted by the same team that specified them.",
+    p: "Cabinetry, wardrobes, media walls and built-in storage — made to the drawing, fitted by the same team.",
   },
   {
     h: "Tiling and waterproofing",
-    p: "Correct substrates, tanking and falls before a single tile is laid. It is the part of a bathroom you never see, and the part that decides whether it lasts.",
+    p: "Correct substrates and tanking before a tile is laid. The part you never see decides how long it lasts.",
   },
   {
     h: "Surfaces and finishes",
-    p: "Microcement, limewash, tadelakt and lime plaster applied in-house as the final layer — not subcontracted out at the end.",
+    p: "Microcement, limewash, tadelakt and lime plaster, applied in-house — not subcontracted at the end.",
   },
   {
     h: "Lighting and final fit",
-    p: "Fixtures, switching, hardware and the last round of adjustments, then a punch list walked with you before handoff.",
+    p: "Fixtures, hardware and final adjustments, then a punch list walked with you before handoff.",
   },
 ];
 
 const onSite = [
   {
     h: "A protected site",
-    p: "Floors, stairs and adjoining rooms are covered and sealed before the first tool comes out. Dust is controlled at source and the site is left clean, because you are usually still living in the house.",
+    p: "Floors and adjoining rooms sealed before the first tool comes out, dust controlled at source. You are usually still living here.",
   },
   {
     h: "The same faces throughout",
-    p: "The trades who start your project finish it. Nobody has to be brought up to speed halfway through, and nothing gets lost in the handover between crews.",
+    p: "The trades who start your project finish it. Nothing gets lost handing over between crews.",
   },
   {
     h: "You always know where it stands",
-    p: "One point of contact, regular updates, and a schedule tied to real milestones — so you know what is happening this week and what comes next.",
+    p: "One point of contact and a schedule tied to real milestones, so you know what is happening this week.",
   },
 ];
 
