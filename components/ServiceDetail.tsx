@@ -55,6 +55,26 @@ export default function ServiceDetail({
         </div>
       </section>
 
+      {service.stages && service.stages.length > 0 && (
+        <section className="capabilities" style={{ paddingTop: 0 }}>
+          <div className="wrap">
+            <div className="capabilities__head">
+              <span className="eyebrow">How it runs</span>
+              <h2>{service.stagesTitle ?? "How the work runs."}</h2>
+            </div>
+            <div className="why">
+              {service.stages.map((s) => (
+                <div className="why__item" key={s.n}>
+                  <span className="why__num">{s.n}</span>
+                  <h3>{s.h}</h3>
+                  <p>{s.p}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <div className="wrap">
         <div className="svc-feature svc-feature--wide">
           <Image src={service.images[1]} alt={service.title} width={1600} height={900} />

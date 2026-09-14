@@ -33,6 +33,48 @@ const buildTypes: BuildType[] = [
   },
 ];
 
+const scope = [
+  {
+    h: "Structural work",
+    p: "Walls taken out, steel and new openings formed, layouts reworked — with the structural design coordinated as part of the build rather than handed to you as a separate problem.",
+  },
+  {
+    h: "Plumbing and electrical",
+    p: "New runs, relocated utilities, panels, circuits and lighting set out early, so nothing has to be chased into a finished wall later.",
+  },
+  {
+    h: "Cabinetry and millwork",
+    p: "Custom cabinetry, wardrobes, media walls and built-in storage, made to the drawing and fitted by the same team that specified them.",
+  },
+  {
+    h: "Tiling and waterproofing",
+    p: "Correct substrates, tanking and falls before a single tile is laid. It is the part of a bathroom you never see, and the part that decides whether it lasts.",
+  },
+  {
+    h: "Surfaces and finishes",
+    p: "Microcement, limewash, tadelakt and lime plaster applied in-house as the final layer — not subcontracted out at the end.",
+  },
+  {
+    h: "Lighting and final fit",
+    p: "Fixtures, switching, hardware and the last round of adjustments, then a punch list walked with you before handoff.",
+  },
+];
+
+const onSite = [
+  {
+    h: "A protected site",
+    p: "Floors, stairs and adjoining rooms are covered and sealed before the first tool comes out. Dust is controlled at source and the site is left clean, because you are usually still living in the house.",
+  },
+  {
+    h: "The same faces throughout",
+    p: "The trades who start your project finish it. Nobody has to be brought up to speed halfway through, and nothing gets lost in the handover between crews.",
+  },
+  {
+    h: "You always know where it stands",
+    p: "One point of contact, regular updates, and a schedule tied to real milestones — so you know what is happening this week and what comes next.",
+  },
+];
+
 const journey = [
   {
     n: "01",
@@ -97,6 +139,24 @@ export default function BuildPage() {
         </div>
       </section>
 
+      {/* What a build covers */}
+      <section className="capabilities" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="capabilities__head">
+            <span className="eyebrow">What&rsquo;s in scope</span>
+            <h2>Everything a remodel actually needs.</h2>
+          </div>
+          <div className="dgrid">
+            {scope.map((c) => (
+              <div className="dgrid__item" key={c.h}>
+                <h3>{c.h}</h3>
+                <p>{c.p}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* The Build Journey */}
       <section className="capabilities" style={{ paddingTop: 0 }}>
         <div className="wrap">
@@ -115,6 +175,24 @@ export default function BuildPage() {
                   <h3>{s.h}</h3>
                   <p>{s.p}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Living with the work */}
+      <section className="capabilities" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="capabilities__head">
+            <span className="eyebrow">On site</span>
+            <h2>Living with the work.</h2>
+          </div>
+          <div className="dgrid">
+            {onSite.map((c) => (
+              <div className="dgrid__item" key={c.h}>
+                <h3>{c.h}</h3>
+                <p>{c.p}</p>
               </div>
             ))}
           </div>
