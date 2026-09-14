@@ -125,6 +125,17 @@ export const services: Service[] = [
     included: ["Full-home design and build", "Structural and layout changes", "All rooms, services and finishes", "End-to-end project management"],
     images: ["/images/build-modern-kitchen.jpg", "/images/buildtype-living-1.jpg"],
   },
+  {
+    slug: "custom-home-builds", discipline: "build", parentHref: "/build", parentLabel: "Build",
+    title: "Custom Home Builds",
+    lead: "A house built from the ground up — designed, constructed and finished by one team.",
+    body: [
+      "Building new means every decision is yours from the first line: how the plan works, where the light lands, how each room connects to the next. We design it with you, then build exactly what we drew.",
+      "Because the same team carries the project from concept through to the final finish, the detailing that usually gets lost between architect, contractor and finisher stays intact. You get one point of contact for the whole build, an itemized proposal before work starts, and a schedule you can plan around.",
+    ],
+    included: ["Design and layout from scratch", "Structure, envelope and utilities", "Cabinetry, millwork and built-ins", "Hand-applied surface finishes"],
+    images: ["/images/custom-home-1.jpg", "/images/custom-home-2.jpg"],
+  },
 
   // ── Surfaces ────────────────────────────────────────────
   {

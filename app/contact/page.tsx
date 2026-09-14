@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
@@ -34,6 +35,10 @@ export default function ContactPage() {
             <div className="contact__block">
               <span className="eyebrow">Studio</span>
               <p>Washington, DC</p>
+            </div>
+            <div className="contact__block">
+              <span className="eyebrow">Before you write</span>
+              <Link href="/faq">Read our FAQ ↗</Link>
             </div>
             <div className="contact__block">
               <span className="eyebrow">Microcement</span>

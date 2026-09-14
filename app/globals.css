@@ -491,3 +491,7 @@ html { overflow-x: clip; }
 .palette__swatch.is-active .palette__chip { box-shadow: inset 0 0 0 2px var(--color-bg), 0 0 0 1px var(--color-text); }
 .palette__note { max-width: 34ch; font-size: 13px; line-height: 1.6; color: var(--color-text-faint); }
 @media (max-width: 640px) { .palette__note { max-width: none; } }
+
+.faq__more { max-width: 74ch; margin-top: clamp(20px, 2.4vw, 28px); }
+.faq__more a { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-text-dim); border-bottom: 1px solid var(--hairline); padding-bottom: 4px; transition: color 0.3s ease, border-color 0.3s ease; }
+.faq__more a:hover { color: var(--color-text); border-color: var(--color-espresso); }

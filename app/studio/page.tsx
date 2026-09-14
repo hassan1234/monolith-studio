@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { allFaqs } from "@/lib/faqs";
 
 export const metadata: Metadata = {
   title: "Studio — Monolith",
@@ -30,32 +31,6 @@ const reasons = [
   },
 ];
 
-const faqs = [
-  {
-    q: "Do you handle design and construction, or just one?",
-    a: "Both. Monolith is a single team across design, build and surfaces, so your project runs through one point of contact from first sketch to final finish.",
-  },
-  {
-    q: "Can I hire you for just one discipline?",
-    a: "Yes. Plenty of clients come to us for a single kitchen remodel, a design scheme, or a specialty surface finish. You are never obliged to take the whole package.",
-  },
-  {
-    q: "How much does a project cost?",
-    a: "Every project is scoped individually — it depends on the rooms, the structural work and the finishes involved. After an initial conversation we provide a clear, itemized proposal before any work begins.",
-  },
-  {
-    q: "How long does a typical project take?",
-    a: "A single-room remodel is usually a matter of weeks; a whole-home renovation runs months. We give you a realistic schedule up front and keep you updated as we go.",
-  },
-  {
-    q: "What is microcement, and do I need the separate studio?",
-    a: "Microcement is a seamless, durable mineral finish. We apply it as part of our surfaces work, and our dedicated microcement studio has the full ranges and galleries if you want to go deeper.",
-  },
-  {
-    q: "What happens after I get in touch?",
-    a: "We arrange a conversation about your space and goals, visit if helpful, and come back with a scope and proposal. From there it moves into our design and build work.",
-  },
-];
 
 export default function StudioPage() {
   return (
@@ -115,13 +90,16 @@ export default function StudioPage() {
             <h2>Frequently asked.</h2>
           </div>
           <div className="faq">
-            {faqs.map((f) => (
+            {allFaqs.slice(0, 4).map((f) => (
               <details className="faq__item" key={f.q}>
                 <summary className="faq__q">{f.q}</summary>
                 <p className="faq__a">{f.a}</p>
               </details>
             ))}
           </div>
+          <p className="faq__more">
+            <Link href="/faq">Read all FAQs ↗</Link>
+          </p>
         </div>
       </section>
 

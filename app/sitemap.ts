@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/build",
     "/surfaces",
     "/studio",
+    "/faq",
     "/areas/washington-dc",
     "/contact",
     "/contact/start-a-project",
