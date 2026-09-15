@@ -23,7 +23,21 @@ export default function Home() {
   return (
     <main>
       <header className="hero">
+        {/* Still image is the base layer: it covers reduced-motion users,
+            blocked autoplay, and the moment before the video buffers. */}
         <div className="hero__img" aria-hidden="true" />
+        <video
+          className="hero__video"
+          src="/video/hero-loop.mp4"
+          poster="/images/hero-bg.jpg"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+          tabIndex={-1}
+        />
         <div className="hero__inner">
           <h1 className="wordmark">Monolith</h1>
           <nav className="hero__links" aria-label="Disciplines">
