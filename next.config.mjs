@@ -1,5 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async headers() {
+    return [
+      {
+        // Hero video never changes in place; rename the file to bust this.
+        source: "/video/:path*",
+        headers: [
+          { key: "Cache-Control", value: "public, max-age=2592000" },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       { source: "/design/3d-visualisation", destination: "/design/3d-visualization", permanent: true },
