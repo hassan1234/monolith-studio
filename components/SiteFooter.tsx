@@ -1,5 +1,17 @@
 import Link from "next/link";
 
+/**
+ * Licensing / insurance shown in the footer.
+ *
+ * These are legal claims about the business, so they must be the real,
+ * current details — a license class or number that is wrong (or lapsed)
+ * is false advertising. Add the confirmed values here and they render
+ * automatically; while the list is empty nothing is shown.
+ *
+ * e.g. ["VA Class A Contractor #2705XXXXXX", "Licensed, Bonded & Insured"]
+ */
+const credentials: string[] = [];
+
 export default function SiteFooter() {
   return (
     <footer className="footer">
@@ -17,6 +29,17 @@ export default function SiteFooter() {
             </nav>
           </div>
         </div>
+        {credentials.length > 0 && (
+          <p className="footer__credentials">
+            {credentials.map((c, i) => (
+              <span key={c}>
+                {i > 0 && <span aria-hidden="true"> · </span>}
+                {c}
+              </span>
+            ))}
+          </p>
+        )}
+
         <div className="footer__bottom">
           <span>© {new Date().getFullYear()} Monolith. All rights reserved.</span>
           <span className="footer__legal">
