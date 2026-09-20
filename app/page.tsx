@@ -46,6 +46,9 @@ export default function Home() {
             <Link href="/surfaces" className="hero__link">Surfaces</Link>
           </nav>
         </div>
+        <Link className="hero__cta" href="/contact/start-a-project">
+          Start a Project ↗
+        </Link>
         <div className="hero__scroll" aria-hidden="true">
           <span>Scroll</span>
           <span>↓</span>
