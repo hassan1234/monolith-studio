@@ -28,7 +28,7 @@ export default function Home() {
         <div className="hero__img" aria-hidden="true" />
         <video
           className="hero__video"
-          src="/video/hero-loop-v2.mp4"
+          src="/video/hero-loop-v3.mp4"
           poster="/images/hero-bg.jpg"
           autoPlay
           loop
