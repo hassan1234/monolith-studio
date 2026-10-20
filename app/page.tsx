@@ -8,9 +8,9 @@ const cards = [
 ];
 
 const whatWeDo = [
-  { n: "01", h: "Interior Design", href: "/design", p: "Considered, modern interiors designed around how you live — kitchens, bathrooms, bedrooms, living spaces and more, inside and out." },
-  { n: "02", h: "Build & Renovation", href: "/build", p: "Full interior remodels and renovations — from custom layouts to complete rebuilds — delivered by the same team that designed them." },
-  { n: "03", h: "Specialty Surfaces", href: "/surfaces", p: "Seamless microcement, limewash and hand-applied mineral finishes: the final, tactile layer that gives a space its character." },
+  { h: "Interior Design", p: "Considered, modern interiors designed around how you live — kitchens, bathrooms, bedrooms, living spaces and more, inside and out." },
+  { h: "Build & Renovation", p: "Full interior remodels and renovations — from custom layouts to complete rebuilds — delivered by the same team that designed them." },
+  { h: "Specialty Surfaces", p: "Seamless microcement, limewash and hand-applied mineral finishes: the final, tactile layer that gives a space its character." },
 ];
 
 const philosophy = [
@@ -56,22 +56,18 @@ export default function Home() {
       </header>
 
       {/* What We Do */}
-      <section className="capabilities band">
+      <section className="capabilities">
         <div className="wrap">
           <div className="capabilities__head">
             <span className="eyebrow">What We Do</span>
             <h2>Three disciplines, one team.</h2>
           </div>
-          <div className="dcards">
+          <div className="dgrid">
             {whatWeDo.map((c) => (
-              <Link className="dcard" href={c.href} key={c.h}>
-                <span className="dcard__num">{c.n}</span>
+              <div className="dgrid__item" key={c.h}>
                 <h3>{c.h}</h3>
                 <p>{c.p}</p>
-                <span className="dcard__more">
-                  Explore <span className="dcard__arrow">↗</span>
-                </span>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
