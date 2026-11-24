@@ -21,3 +21,11 @@ npm run dev
 ```
 
 Then open http://localhost:3000.
+
+## Environment variables
+
+| Variable | Required | What it does |
+|---|---|---|
+| `GHL_WEBHOOK_URL` | yes | GoHighLevel inbound-webhook URL that `/api/enquiry` forwards website enquiries to. Set in Vercel → Project → Settings → Environment Variables for Production, Preview and Development. Without it the contact forms return an error and the enquiry is logged but not delivered. |
+
+The value is read server-side only, so it never reaches the browser bundle.
