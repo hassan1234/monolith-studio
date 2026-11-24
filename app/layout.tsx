@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import SiteNav from "@/components/SiteNav";
 import SiteFooter from "@/components/SiteFooter";
@@ -33,6 +34,13 @@ export default function RootLayout({
         <SiteNav />
         {children}
         <SiteFooter />
+        {/* GoHighLevel chat widget — "A2P Compliance Chat Widget Mixed" */}
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6b05f1d829fc2dc00f3c8416"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
