@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import StartProjectForm from "@/components/StartProjectForm";
+import GhlForm from "@/components/GhlForm";
+import { STUDIO_FORM_ID, STUDIO_FORM_TITLE } from "@/lib/ghl";
 
 export const metadata: Metadata = {
   title: "Start a Project — Monolith",
@@ -41,7 +42,10 @@ export default function StartProjectPage() {
             </div>
           </div>
           <div>
-            <StartProjectForm />
+            <GhlForm
+              formId={STUDIO_FORM_ID}
+              title={STUDIO_FORM_TITLE}
+            />
           </div>
         </div>
       </div>

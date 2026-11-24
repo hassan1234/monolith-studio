@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import ContactForm from "@/components/ContactForm";
+import GhlForm from "@/components/GhlForm";
+import { STUDIO_FORM_ID, STUDIO_FORM_TITLE } from "@/lib/ghl";
 
 export const metadata: Metadata = {
   title: "Contact — Monolith",
@@ -48,7 +49,10 @@ export default function ContactPage() {
             </div>
           </div>
           <div>
-            <ContactForm />
+            <GhlForm
+              formId={STUDIO_FORM_ID}
+              title={STUDIO_FORM_TITLE}
+            />
           </div>
         </div>
       </div>
