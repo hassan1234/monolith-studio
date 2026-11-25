@@ -24,9 +24,18 @@ export const BUSINESS = {
     country: "US",
   },
   email: "hello@monolithstudio.co",
-  /** Display form; use `phoneHref` for tel: links. */
-  phone: "202‑603‑6933",
-  phoneHref: "+12026036933",
+  /**
+   * The GoHighLevel number, and the one registered under the approved A2P
+   * 10DLC brand. Publish this and no other: a client who texts the number on
+   * the site must reach the CRM, and carriers expect the number that sends
+   * the messages to be the number the business advertises. Changing it means
+   * changing it in GoHighLevel too (Settings -> Phone System, and the
+   * `phone` custom value).
+   *
+   * Display form; use `phoneHref` for tel: links.
+   */
+  phone: "571‑506‑6126",
+  phoneHref: "+15715066126",
 } as const;
 
 /** "254 Chapman Rd, Ste 208 #26710, Newark, DE 19702" */
