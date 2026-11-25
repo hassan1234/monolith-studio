@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact/start-a-project",
     "/privacy",
     "/terms",
+    "/sms-terms",
   ];
   const serviceRoutes = services.map((s) => `${s.parentHref}/${s.slug}`);
   const projectRoutes = projects.map((p) => `/work/${p.slug}`);

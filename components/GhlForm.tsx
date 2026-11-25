@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Script from "next/script";
 
 type Props = {
@@ -18,6 +19,10 @@ type Props = {
  * `src-site-studio` and emails hello@monolithstudio.co (workflow
  * "Studio Site - Tag Source"). form_embed.js posts the rendered height back
  * and resizes the iframe by its id, so the frame grows with the form.
+ *
+ * The consent note under the frame is required for A2P 10DLC: the opt-in has
+ * to sit next to the privacy policy and text-messaging terms it refers to, and
+ * the form itself is a cross-origin iframe whose label text cannot link out.
  *
  * The iframe deliberately does NOT set loading="lazy". With it, the form
  * never loaded at all on the live site: the frame sat blank at its
@@ -44,6 +49,15 @@ export default function GhlForm({ formId, title, minHeight = 820 }: Props) {
         data-deactivation-type="neverDeactivate"
         data-activation-type="alwaysActivated"
       />
+      <p className="form__consent">
+        Ticking a text-messaging box is optional and is never required to get a
+        quote. Message frequency varies, message and data rates may apply, and
+        you can reply STOP at any time to opt out or HELP for assistance. See our{" "}
+        <Link href="/sms-terms">Text Messaging Terms</Link> and{" "}
+        <Link href="/privacy">Privacy Policy</Link>. We never sell or share your
+        number.
+      </p>
+
       <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload" />
       <noscript>
         <p className="form__note">
