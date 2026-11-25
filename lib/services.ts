@@ -16,7 +16,9 @@ export type Service = {
   lead: string;
   body: string[];
   included: string[];
-  images: [string, string];
+  /** At least two: ServiceDetail renders images[0] and images[1] directly.
+      Any beyond the second are extra gallery slides. */
+  images: [string, string, ...string[]];
   /** Surfaces only: real color options available in this finish. */
   palette?: PaletteColor[];
   /** Optional numbered process section, rendered only when present. */
@@ -94,7 +96,7 @@ export const services: Service[] = [
       "From a compact ensuite to a spa-like main bathroom, every detail is resolved.",
     ],
     included: ["New layouts and waterproofing", "Tiling, vanities and fixtures", "Walk-in showers and tubs", "Heating, lighting and ventilation"],
-    images: ["/images/buildtype-bathroom-1.jpg", "/images/buildtype-bathroom-2.jpg"],
+    images: ["/images/buildtype-bathroom-1.jpg", "/images/buildtype-bathroom-2.jpg", "/images/buildtype-bathroom-3.jpg"],
   },
   {
     slug: "basement-renovation", discipline: "build", parentHref: "/build", parentLabel: "Build",

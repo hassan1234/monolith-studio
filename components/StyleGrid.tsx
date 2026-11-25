@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import PhotoCarousel from "@/components/PhotoCarousel";
 
 export type StyleItem = { src: string; style: string; alt: string };
 
@@ -13,13 +13,12 @@ export default function StyleGrid({
   styles: string[];
 }) {
   const [active, setActive] = useState(styles[0]);
-  const filters = styles;
   const shown = items.filter((i) => i.style === active);
 
   return (
     <div className="stylegrid">
       <div className="stylegrid__filters" role="tablist" aria-label="Filter by style">
-        {filters.map((f) => (
+        {styles.map((f) => (
           <button
             key={f}
             type="button"
@@ -33,13 +32,13 @@ export default function StyleGrid({
         ))}
       </div>
 
-      <div className="stylegrid__grid" key={active}>
-        {shown.map((i) => (
-          <div className="stylegrid__item" key={i.src}>
-            <Image src={i.src} alt={i.alt} fill sizes="(max-width: 520px) 100vw, (max-width: 860px) 50vw, 33vw" />
-          </div>
-        ))}
-      </div>
+      {/* key remounts the carousel so a new style starts at photo 1 */}
+      <PhotoCarousel
+        key={active}
+        label={`${active} interiors`}
+        aspect="portrait"
+        images={shown.map((i) => ({ src: i.src, alt: i.alt }))}
+      />
     </div>
   );
 }

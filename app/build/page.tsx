@@ -19,7 +19,7 @@ const buildTypes: BuildType[] = [
   {
     name: "Bathroom Remodels",
     blurb: "A full re-do: new layout, waterproofing, tiling, vanities, showers and fixtures, upgraded from the studs out.",
-    images: ["/images/buildtype-bathroom-1.jpg", "/images/buildtype-bathroom-2.jpg"],
+    images: ["/images/buildtype-bathroom-1.jpg", "/images/buildtype-bathroom-2.jpg", "/images/buildtype-bathroom-3.jpg"],
   },
   {
     name: "Living Spaces",

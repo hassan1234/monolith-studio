@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import PhotoCarousel from "@/components/PhotoCarousel";
 
 export type BuildType = { name: string; blurb: string; images: string[] };
 
@@ -26,13 +26,12 @@ export default function BuildTypes({ types }: { types: BuildType[] }) {
         ))}
       </div>
 
-      <div className="btypes__grid" key={active}>
-        {t.images.map((src) => (
-          <div className="btypes__item" key={src}>
-            <Image src={src} alt={t.name} fill sizes="(max-width: 860px) 100vw, 50vw" />
-          </div>
-        ))}
-      </div>
+      {/* key remounts the carousel so a new remodel type starts at photo 1 */}
+      <PhotoCarousel
+        key={t.name}
+        label={`${t.name} photos`}
+        images={t.images.map((src, i) => ({ src, alt: `${t.name} — photo ${i + 1}` }))}
+      />
 
       <p className="btypes__blurb">{t.blurb}</p>
     </div>
