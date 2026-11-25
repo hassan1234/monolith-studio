@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { BUSINESS, ADDRESS_ONE_LINE, ENTITY_LINE } from "@/lib/business";
 
 export const metadata: Metadata = {
   title: "Terms of Service — Monolith",
@@ -14,7 +16,7 @@ export default function TermsPage() {
           <h1 style={{ fontSize: "var(--text-display)", letterSpacing: "-0.01em", textTransform: "none" }}>
             Terms of Service
           </h1>
-          <p className="legal__updated">Last updated 3 September 2026</p>
+          <p className="legal__updated">Last updated 25 November 2026</p>
         </div>
       </header>
 
@@ -23,7 +25,7 @@ export default function TermsPage() {
           <p>
             These terms apply to your use of monolithstudio.co. By using the site
             you agree to them. They do not replace the written agreement we put in
-            place for any specific project.
+            place for any specific project. {ENTITY_LINE}.
           </p>
 
           <h2>Using this website</h2>
@@ -55,6 +57,16 @@ export default function TermsPage() {
             control.
           </p>
 
+          <h2>Text messaging</h2>
+          <p>
+            If you give us your mobile number and tick a consent box, we may send
+            you text messages. Message frequency varies, message and data rates
+            may apply, you can reply STOP at any time to opt out or HELP for
+            assistance, and consent is never a condition of any purchase. See our{" "}
+            <Link href="/sms-terms">Text Messaging Terms</Link> for the full
+            terms.
+          </p>
+
           <h2>Liability</h2>
           <p>
             To the extent permitted by law, we are not liable for any loss arising
@@ -64,7 +76,8 @@ export default function TermsPage() {
           <h2>Contact</h2>
           <p>
             Questions about these terms? Email{" "}
-            <a href="mailto:hello@monolithstudio.co">hello@monolithstudio.co</a>.
+            <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>, or write to{" "}
+            {BUSINESS.legalName}, {ADDRESS_ONE_LINE}.
           </p>
         </div>
       </section>

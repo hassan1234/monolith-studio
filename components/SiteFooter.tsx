@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BUSINESS, ADDRESS_ONE_LINE, ENTITY_LINE } from "@/lib/business";
 
 /**
  * Licensing / insurance shown in the footer.
@@ -29,6 +30,24 @@ export default function SiteFooter() {
             </nav>
           </div>
         </div>
+        {/*
+          Legal entity and postal address.
+
+          Mobile carriers reviewing the A2P 10DLC registration check that the
+          website identifies the registered business and publishes a matching
+          address. Both values come from lib/business.ts; keep them in step with
+          the brand application.
+        */}
+        <p className="footer__entity">
+          <span>{ENTITY_LINE}</span>
+          <span aria-hidden="true"> · </span>
+          <span>{ADDRESS_ONE_LINE}</span>
+          <span aria-hidden="true"> · </span>
+          <a href={`tel:${BUSINESS.phoneHref}`}>{BUSINESS.phone}</a>
+          <span aria-hidden="true"> · </span>
+          <a href={`mailto:${BUSINESS.email}`}>{BUSINESS.email}</a>
+        </p>
+
         {credentials.length > 0 && (
           <p className="footer__credentials">
             {credentials.map((c, i) => (
@@ -45,6 +64,7 @@ export default function SiteFooter() {
           <span className="footer__legal">
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
+            <Link href="/sms-terms">Text Messaging</Link>
             <a
               href="https://monolithmicrocement.com"
               target="_blank"
