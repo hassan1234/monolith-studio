@@ -14,22 +14,36 @@ const buildTypes: BuildType[] = [
   {
     name: "Kitchen Remodels",
     blurb: "New layouts, cabinetry, countertops, appliances and utilities — the whole kitchen rebuilt around how you cook.",
-    images: ["/images/buildtype-kitchen-1.jpg", "/images/buildtype-kitchen-2.jpg", "/images/buildtype-kitchen-3.jpg"],
+    images: [
+      { src: "/images/buildtype-kitchen-1.jpg", alt: "White kitchen remodel with a marble-topped island, brass hardware and a farmhouse sink beneath the window" },
+      { src: "/images/buildtype-kitchen-2.jpg", alt: "Light oak and cream kitchen remodel with a marble waterfall island, induction hob and counter stools under a skylight" },
+      { src: "/images/buildtype-kitchen-3.jpg", alt: "Walnut kitchen island with a built-in upholstered dining booth and a round walnut table" },
+    ],
   },
   {
     name: "Bathroom Remodels",
     blurb: "A full re-do: new layout, waterproofing, tiling, vanities, showers and fixtures, upgraded from the studs out.",
-    images: ["/images/buildtype-bathroom-1.jpg", "/images/buildtype-bathroom-2.jpg", "/images/buildtype-bathroom-3.jpg"],
+    images: [
+      { src: "/images/buildtype-bathroom-1.jpg", alt: "Primary bathroom remodel with a floating double vanity, glass-enclosed walk-in shower and a freestanding tub by the window" },
+      { src: "/images/buildtype-bathroom-2.jpg", alt: "Stone-tiled bathroom with a walk-in shower behind a frameless glass screen and a fluted double vanity with twin mirrors" },
+      { src: "/images/buildtype-bathroom-3.jpg", alt: "Double vanity with vessel basins on a concrete counter, round black-framed mirrors and hanging pendant lights" },
+    ],
   },
   {
     name: "Living Spaces",
     blurb: "Reconfigured layouts, built-in millwork, fireplaces and feature walls that change how a room lives.",
-    images: ["/images/buildtype-living-1.jpg", "/images/buildtype-living-2.jpg"],
+    images: [
+      { src: "/images/buildtype-living-1.jpg", alt: "Living room with built-in oak shelving either side of a plaster fireplace with a linear gas fire" },
+      { src: "/images/buildtype-living-2.jpg", alt: "Built-in media wall with a raised plaster panel, fluted oak bay and a cantilevered oak credenza" },
+    ],
   },
   {
     name: "Basements",
     blurb: "Unused space turned into a proper room — living room, media room, gym or guest suite, fully finished.",
-    images: ["/images/buildtype-basement-1.jpg", "/images/buildtype-basement-2.jpg"],
+    images: [
+      { src: "/images/buildtype-basement-1.jpg", alt: "Finished basement with an oak media wall, lit display shelving, a coved ceiling and a wet bar beyond" },
+      { src: "/images/buildtype-basement-2.jpg", alt: "Finished basement with a dark timber wet bar, copper sink and lit glass shelving beside a stone fireplace" },
+    ],
   },
 ];
 
