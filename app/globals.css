@@ -376,9 +376,11 @@ html { overflow-x: clip; }
 .pcar__track:focus-visible { outline: 2px solid var(--color-text); outline-offset: 3px; }
 .pcar__item { position: relative; overflow: hidden; background: var(--color-surface); scroll-snap-align: start; }
 .pcar__item img { object-fit: cover; }
-.pcar--wide .pcar__item { aspect-ratio: 16 / 10; }
+/* Slide shapes match the source photos (landscape 4:3, portrait 3:4) so
+   object-fit: cover has nothing to crop. A wider slide here silently cut
+   the top and bottom off every landscape photo. */
+.pcar--wide .pcar__item { aspect-ratio: 4 / 3; }
 .pcar--portrait .pcar__item { aspect-ratio: 3 / 4; }
-@media (max-width: 640px) { .pcar--wide .pcar__item { aspect-ratio: 4 / 3; } }
 
 .pcar__nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid rgba(244, 240, 232, 0.5); border-radius: 50%; background: rgba(20, 15, 10, 0.3); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); color: #F4F0E8; font-size: 15px; line-height: 1; transition: background 0.25s ease, opacity 0.25s ease; }
 .pcar__nav:hover { background: rgba(20, 15, 10, 0.55); }
