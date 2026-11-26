@@ -14,7 +14,7 @@ const buildTypes: BuildType[] = [
   {
     name: "Kitchen Remodels",
     blurb: "New layouts, cabinetry, countertops, appliances and utilities — the whole kitchen rebuilt around how you cook.",
-    images: ["/images/buildtype-kitchen-1.jpg", "/images/buildtype-kitchen-2.jpg"],
+    images: ["/images/buildtype-kitchen-1.jpg", "/images/buildtype-kitchen-2.jpg", "/images/buildtype-kitchen-3.jpg"],
   },
   {
     name: "Bathroom Remodels",

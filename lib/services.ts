@@ -85,7 +85,7 @@ export const services: Service[] = [
       "One team handles design through to the final coat, so the result matches the drawing exactly.",
     ],
     included: ["New layouts and cabinetry", "Countertops, backsplashes and tiling", "Appliance and utility installation", "Lighting and final finishes"],
-    images: ["/images/buildtype-kitchen-1.jpg", "/images/buildtype-kitchen-2.jpg"],
+    images: ["/images/buildtype-kitchen-1.jpg", "/images/buildtype-kitchen-2.jpg", "/images/buildtype-kitchen-3.jpg"],
   },
   {
     slug: "bathroom-remodel", discipline: "build", parentHref: "/build", parentLabel: "Build",
