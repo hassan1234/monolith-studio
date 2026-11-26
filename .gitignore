@@ -28,3 +28,6 @@ yarn-error.log*
 .claude/
 .vercel
 .env*
+
+# Full-resolution render sources, kept locally, not shipped
+.renders/

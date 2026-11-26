@@ -66,14 +66,14 @@ export const projects: Project[] = [
     category: "Basement",
     disciplines: ["Design", "Build"],
     year: "2024",
-    summary: "An unused basement turned into a warm lounge and guest suite, fully insulated and finished.",
+    summary: "An unused basement turned into a warm lounge and a dedicated home theatre, fully insulated and finished.",
     hero: "/images/buildtype-basement-1.jpg",
     gallery: ["/images/buildtype-basement-2.jpg"],
     body: [
-      "We tackled damp, low ceilings and awkward services to create a genuinely usable room — a cosy lounge with a wet bar and a guest space.",
-      "Warm lighting and engineered oak flooring make it feel like a natural part of the home.",
+      "We tackled damp, low ceilings and awkward services to create two genuinely usable rooms — a cosy lounge with a wet bar, and a dedicated theatre built out alongside it.",
+      "The theatre is finished in matte black from the walls to the ceiling so nothing reflects back at the screen, with the screen recessed into the wall and carpeted steps down from a raised bar run to the seating.",
     ],
-    scope: ["Insulation, plumbing and electrical", "Living room and guest suite", "Built-in millwork and wet bar", "Lighting and flooring"],
+    scope: ["Insulation, plumbing and electrical", "Lounge, wet bar and home theatre", "Built-in millwork and recessed screen wall", "Carpeted riser, lighting and flooring"],
   },
   {
     slug: "microcement-surfaces",

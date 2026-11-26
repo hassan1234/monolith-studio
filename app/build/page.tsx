@@ -42,7 +42,7 @@ const buildTypes: BuildType[] = [
     blurb: "Unused space turned into a proper room — living room, media room, gym or guest suite, fully finished.",
     images: [
       { src: "/images/buildtype-basement-1.jpg", alt: "Finished basement with an oak media wall, lit display shelving, a coved ceiling and a wet bar beyond" },
-      { src: "/images/buildtype-basement-2.jpg", alt: "Finished basement with a dark timber wet bar, copper sink and lit glass shelving beside a stone fireplace" },
+      { src: "/images/buildtype-basement-2.jpg", alt: "Basement home theatre finished in matte black from walls to ceiling, with a projection screen recessed into the wall, carpeted steps down to reclining seating and a raised quartz-topped bar behind" },
     ],
   },
 ];
