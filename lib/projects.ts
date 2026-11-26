@@ -66,14 +66,15 @@ export const projects: Project[] = [
     category: "Basement",
     disciplines: ["Design", "Build"],
     year: "2024",
-    summary: "An unused basement turned into a warm lounge and a dedicated home theatre, fully insulated and finished.",
+    summary: "An unused basement turned into a bar and a dedicated home theatre, fully insulated and finished.",
     hero: "/images/buildtype-basement-1.jpg",
     gallery: ["/images/buildtype-basement-2.jpg"],
     body: [
-      "We tackled damp, low ceilings and awkward services to create two genuinely usable rooms — a cosy lounge with a wet bar, and a dedicated theatre built out alongside it.",
+      "We tackled damp, low ceilings and awkward services to create two genuinely usable rooms — a bar for entertaining, and a dedicated theatre built out alongside it.",
+      "The bar counter is a single seamless slab of hand-applied microcement with a full waterfall return to the floor, set against honed travertine and lit floating shelves. The prep sink sits on the back counter, well clear of the seating.",
       "The theatre is finished in matte black from the walls to the ceiling so nothing reflects back at the screen, with the screen recessed into the wall and carpeted steps down from a raised bar run to the seating.",
     ],
-    scope: ["Insulation, plumbing and electrical", "Lounge, wet bar and home theatre", "Built-in millwork and recessed screen wall", "Carpeted riser, lighting and flooring"],
+    scope: ["Insulation, plumbing and electrical", "Microcement bar and home theatre", "Built-in millwork and recessed screen wall", "Carpeted riser, lighting and flooring"],
   },
   {
     slug: "microcement-surfaces",
